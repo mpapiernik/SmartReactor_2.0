@@ -1,0 +1,675 @@
+{{#> 
+	layouts/main 
+	title="Timeline" 
+	pagename="timeline" 
+	category_1="Application Intel" 
+}}
+
+{{#*inline "head-block"}}
+<link rel="stylesheet" media="screen, print" href="css/miscellaneous/reactions/reactions.css">
+<link rel="stylesheet" media="screen, print" href="css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
+<link rel="stylesheet" media="screen, print" href="css/miscellaneous/jqvmap/jqvmap.bundle.css">
+<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
+<link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
+{{/inline}}
+
+{{#*inline "content-block"}}
+
+<div class="row">
+	<div class="col-lg-12">
+		<div id="panel-1" class="panel" data-panel-fullscreen="false">
+			<div class="panel-hdr">
+				<h2>
+					Timeline
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content p-0">
+					<div class="d-flex flex-column">
+						<div class="custom-scroll">
+							<div id="vertical-timeline" class="vertical-container dark-timeline">
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base-4 icon-stack-3x color-primary-400"></i>
+										<i class="base-4  icon-stack-2x color-primary-200"></i>
+										<i class="fal fa-inbox-out text-white icon-stack-1x"></i>
+									</span>
+
+
+									<div class="vertical-timeline-content" id="msg-01">
+										<div class="flex-1 d-flex flex-column cursor-pointer collapsed"
+											data-toggle="collapse" data-target="#msg-01 > .js-collapse"
+											aria-expanded="false">
+
+											<span class="text-sm text-muted">
+												<span class="badge badge-success">Wykonane </span> | <i
+													class="fal fa-clock mr-1"></i>
+												2019.09.17 12:41 | <i class="fal fa-user mr-1"></i>
+												Halina Nowak
+												<a href="javascript:void(0);"
+													class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bootom" title=""
+													data-original-title="Wydrukuj dokument">
+													<i class="fas fa-print"></i>
+												</a>
+												<a href="javascript:void(0);" id="js-delete-selected"
+													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Wyślij e-mail">
+													<i class="fas fa-at fs-md"></i>
+												</a>
+												<a href="javascript:void(0);" id="js-delete-selected"
+													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Usuń">
+													<i class="fas fa-trash fs-md"></i>
+												</a>
+												<a href="javascript:void(0);"
+													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Zrezygnuj z wykonania zadania">
+
+													<i class="fas fa-times-circle fs-md"></i>
+												</a>
+												<a href="javascript:void(0);"
+													class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Oznacz jako wykonane">
+													<i class="fas fa-check-circle fs-md"></i>
+												</a>
+												<a href="javascript:void(0);"
+													class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Edytuj">
+
+													<i class="fas fa-edit"></i>
+												</a>
+											</span>
+											<h2>Zadanie: E-mail II wezwanie do zapłaty przesłane przez DOK automatyczny
+												klasa B
+											</h2>
+											<div class="card-header bg-white p-0 mb-1">
+												<div class="p-2 d-flex flex-row">
+													<div class="d-block flex-shrink-0">
+														<img src="img/demo/avatars/avatar-admin.png"
+															class="img-fluid img-thumbnail" alt="">
+													</div>
+													<div class="d-block ml-2">
+														<span class="h6 font-weight-bold text-uppercase d-block m-0"><a
+																href="javascript:void(0);">Wykonawca</a></span>
+														<div class="info-card-text flex-1">
+															<a href="javascript:void(0);"
+																class="fs-xl text-truncate text-truncate-lg text-info"
+																data-toggle="dropdown" aria-expanded="false">
+																Marcin Banaszek
+																<i
+																	class="fal fa-angle-down d-inline-block ml-1 fs-md"></i>
+															</a>
+															<div class="dropdown-menu" x-placement="bottom-start"
+																style="position: absolute; top: 42px; left: 82px; will-change: top, left;">
+																<a class="dropdown-item" href="#">Deleguj zadanie</a>
+																<a class="dropdown-item" href="#">Podgląd pracownika</a>
+															</div>
+															<span class="text-truncate text-truncate-xl">Kierownik BOK/
+																<span class="fw-300">Oddział 1 - Gdańsk </span></span>
+														</div>
+													</div>
+													</a>
+												</div>
+											</div>
+											<p> Conference on the sales results for the previous year. Monica please
+												examine
+												sales trends in marketing and products. Below please find the current
+												status
+												of the sale.
+											</p>
+											<div class="col-12">
+												<div class="p-2 text-center">
+													<span class="collapsed-hidden">
+														<a href="javascript:void(0);" class="btn-link font-weight-bold">
+															Rozwiń szczegóły
+															<i class="fal fa-angle-down"></i></a>
+													</span>
+													<span class="collapsed-reveal">
+														<a href="javascript:void(0);" class="btn-link font-weight-bold">
+															Zwiń szczegóły
+															<i class="fal fa-angle-up"></i></a>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="js-collapse collapse" style="">
+											<div class="frame-wrap mb-1 mt-1">
+												<table class="table table-sm m-0">
+													<thead class="bg-primary-500">
+														<tr>
+															<th>#</th>
+															<th>Numer dokumentu</th>
+															<th>Data sprzedaży</th>
+															<th>Kwota płatności</th>
+															<th>Kwota pozostała</th>
+															<th>Kwota w oryginalnej walucie</th>
+															<th>Kwota w oryginalnej walucie</th>
+															<th>Numer faktury korygowanej</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<th scope="row">1</th>
+															<td>21376813</td>
+															<td>2019-02-12</td>
+															<td>2 647,97 zł</td>
+															<td>2 647,97 zł</td>
+															<td>2 647,97 zł</td>
+															<td>2 647,97 zł</td>
+															<td>-</td>
+														</tr>
+														<tr>
+															<th scope="row">2</th>
+															<td>F/43376813</td>
+															<td>2019-06-12</td>
+															<td>1 647,97 zł</td>
+															<td>647,97 zł</td>
+															<td>2 647,97 zł</td>
+															<td>647,97 zł</td>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="h3 m-0 d-flex align-items-center">
+												<span>Suma do spłaty:</span>
+												<div class="icon-stack mr-2">
+													<i
+														class="base base-7 icon-stack-3x opacity-100 color-success-600"></i>
+													<i
+														class="base base-7 icon-stack-2x opacity-100 color-success-500"></i>
+													<i
+														class="fal fa-arrow-up icon-stack-1x opacity-100 color-white"></i>
+												</div>
+												4 405,84 zł
+											</div>
+											<!-- File downloads -->
+											<div class="d-flex mt-3 flex-wrap">
+												<div class="btn-group mr-1 mt-1" role="group"
+													aria-label="Button group with nested dropdown ">
+													<button type="button"
+														class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+														data-action="toggle">
+														<span class="d-block text-truncate text-truncate-sm">
+															<i class="fal fa-file-excel mr-1 color-success-700"></i>
+															Invoices_2018_12
+														</span>
+													</button>
+													<div class="btn-group" role="group">
+														<button id="btnGroupDrop1" type="button"
+															class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false"></button>
+														<div class="dropdown-menu p-0 fs-xs"
+															aria-labelledby="btnGroupDrop1">
+															<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+															<a class="dropdown-item px-3 py-2" href="#">Open</a>
+															<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+														</div>
+													</div>
+												</div>
+												<div class="btn-group mr-1 mt-1" role="group"
+													aria-label="Button group with nested dropdown ">
+													<button type="button"
+														class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+														data-action="toggle">
+														<span class="d-block text-truncate text-truncate-sm">
+															<i class="fal fa-file-pdf mr-1 color-danger-700"></i>
+															Bloodworks
+															Patient 34124BA
+														</span>
+													</button>
+													<div class="btn-group" role="group">
+														<button id="btnGroupDrop2" type="button"
+															class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false"></button>
+														<div class="dropdown-menu p-0 fs-xs"
+															aria-labelledby="btnGroupDrop2">
+															<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+															<a class="dropdown-item px-3 py-2" href="#">Open</a>
+															<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<!-- File downloads end -->
+										</div>
+									</div>
+								</div>
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base-1 icon-stack-3x color-info-700"></i>
+										<i class="base-1  icon-stack-2x color-info-500"></i>
+										<i class="fal fa-inbox-out text-white icon-stack-1x"></i>
+									</span>
+
+									<div class="vertical-timeline-content" id="msg-02">
+										<div class="flex-1 d-flex flex-column cursor-pointer collapsed"
+											data-toggle="collapse" data-target="#msg-02 > .js-collapse"
+											aria-expanded="false">
+
+											<span class="text-sm text-muted">
+												<i class="fal fa-clock mr-1"></i>
+												2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
+												Maciej Ważny
+												<a href="javascript:void(0);"
+													class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bootom" title=""
+													data-original-title="Wydrukuj dokument">
+													<i class="fas fa-print"></i>
+												</a>
+
+												<a href="javascript:void(0);" id="js-delete-selected"
+													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Usuń">
+													<i class="fas fa-trash fs-md"></i>
+												</a>
+												<a href="javascript:void(0);" id="js-delete-selected"
+													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Podgląd dokumentu">
+													<i class="fas fa-paperclip fs-md"></i>
+												</a>
+
+												<a href="javascript:void(0);"
+													class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Edytuj">
+
+													<i class="fas fa-edit"></i>
+												</a>
+											</span>
+											<h2>E-mail: Informacja o terminach płatności faktur z Fresh Logistics
+												(email)
+											</h2>
+											<p> Conference on the sales results for the previous year. Monica please
+												examine
+												sales trends in marketing and products. Below please find the current
+												status
+												of the sale.
+											</p>
+
+											<div class="col-12">
+												<div class="p-2 text-center">
+													<span class="collapsed-hidden">
+														<a href="javascript:void(0);" class="btn-link font-weight-bold">
+															Rozwiń szczegóły
+															<i class="fal fa-angle-down"></i></a>
+													</span>
+													<span class="collapsed-reveal">
+														<a href="javascript:void(0);" class="btn-link font-weight-bold">
+															Zwiń szczegóły
+															<i class="fal fa-angle-up"></i></a>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="js-collapse collapse" style="">
+
+											<table class="table table-bordered m-0">
+
+												<tbody>
+													<tr>
+														<th scope="row">Odbiorca</th>
+														<td>Firma 2 <m.papiernik@smartmedia.com.pl>
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">Temat</th>
+														<td>Informacja o terminach płatności faktur z Fresh Logistics -
+															Numer
+															klienta: CN2</td>
+													</tr>
+													<tr>
+														<th scope="row">Treść</th>
+														<td> Etiam porta sem malesuada magna mollis euismod.
+															Vestibulum id ligula porta felis euismod semper eget lacinia
+															odio
+															sem nec elit.</td>
+													</tr>
+
+												</tbody>
+											</table>
+
+											<!-- File downloads -->
+											<div class="d-flex mt-3 flex-wrap">
+
+												<div class="btn-group mr-1 mt-1" role="group"
+													aria-label="Button group with nested dropdown ">
+													<button type="button"
+														class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+														data-action="toggle">
+														<span class="d-block text-truncate text-truncate-sm">
+															<i class="fal fa-file-pdf mr-1 color-danger-700"></i>
+															Bloodworks
+															Patient 34124BA
+														</span>
+													</button>
+													<div class="btn-group" role="group">
+														<button id="btnGroupDrop2" type="button"
+															class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false"></button>
+														<div class="dropdown-menu p-0 fs-xs"
+															aria-labelledby="btnGroupDrop2">
+															<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+															<a class="dropdown-item px-3 py-2" href="#">Open</a>
+															<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<!-- File downloads end -->
+										</div>
+
+									</div>
+								</div>
+
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base base-7 icon-stack-3x opacity-100 color-success-500"></i>
+										<i class="fal fa-sticky-note icon-stack-1x opacity-100 color-white"></i>
+									</span>
+
+									<div class="vertical-timeline-content">
+										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
+											2019.09.15 09:41 | <i class="fal fa-user mr-1"></i>
+											Admin
+
+
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed">
+												<i class="fas fa-print"></i>
+											</a>
+											<a href="javascript:void(0);" id="js-delete-selected"
+												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed">
+												<i class="fas fa-trash fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed">
+												<i class="fas fa-edit fs-md"></i>
+											</a>
+										</span>
+										<h2>Notatka</h2>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+									</div>
+								</div>
+
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base-19 icon-stack-3x color-danger-700"></i>
+										<i class="base-19  icon-stack-2x color-danger-500"></i>
+										<i class="fal fa-paperclip text-white icon-stack-1x"></i>
+									</span>
+
+
+									<div class="vertical-timeline-content">
+										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
+											2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
+											Maciej Ważny
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bootom" title=""
+												data-original-title="Wydrukuj dokument">
+												<i class="fas fa-print"></i>
+											</a>
+
+											<a href="javascript:void(0);" id="js-delete-selected"
+												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Usuń">
+												<i class="fas fa-trash fs-md"></i>
+											</a>
+											<a href="javascript:void(0);" id="js-delete-selected"
+												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Podgląd dokumentu">
+												<i class="fas fa-paperclip fs-md"></i>
+											</a>
+
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Edytuj">
+
+												<i class="fas fa-edit"></i>
+											</a>
+										</span>
+										<h2>Plik: Nazwa pliku
+										</h2>
+										<p> To jest opis pliku
+										</p>
+										<div class="d-flex mt-3 flex-wrap">
+
+											<div class="btn-group mr-1 mt-1" role="group"
+												aria-label="Button group with nested dropdown ">
+												<button type="button"
+													class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+													data-action="toggle">
+													<span class="d-block text-truncate text-truncate-sm">
+														<i class="fal fa-file-pdf mr-1 color-danger-700"></i>
+														Bloodworks
+														Patient 34124BA
+													</span>
+												</button>
+												<div class="btn-group" role="group">
+													<button id="btnGroupDrop2" type="button"
+														class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+														data-toggle="dropdown" aria-haspopup="true"
+														aria-expanded="false"></button>
+													<div class="dropdown-menu p-0 fs-xs"
+														aria-labelledby="btnGroupDrop2">
+														<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+														<a class="dropdown-item px-3 py-2" href="#">Open</a>
+														<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<!-- File downloads end -->
+									</div>
+								</div>
+
+								<div class="vertical-timeline-block">
+									<div class="vertical-timeline-icon lazur-bg">
+										<i class="fa fa-coffee"></i>
+									</div>
+
+									<div class="vertical-timeline-content">
+										<h2>Coffee Break</h2>
+										<p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the
+											printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
+										<a href="#" class="btn btn-sm btn-info">Read more</a>
+										<span class="vertical-date"> Yesterday <br><small>Dec 23</small></span>
+									</div>
+								</div>
+
+								<div class="vertical-timeline-block">
+									<div class="vertical-timeline-icon yellow-bg">
+										<i class="fa fa-phone"></i>
+									</div>
+
+									<div class="vertical-timeline-content">
+										<h2>Phone with Jeronimo</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio,
+											dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa
+											ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+										<span class="vertical-date">Yesterday <br><small>Dec 23</small></span>
+									</div>
+								</div>
+
+								<div class="vertical-timeline-block">
+									<div class="vertical-timeline-icon lazur-bg">
+										<i class="fa fa-user-md"></i>
+									</div>
+
+									<div class="vertical-timeline-content">
+										<h2>Go to the doctor dr Smith</h2>
+										<p>Find some issue and go to doctor. Lorem Ipsum is simply dummy text of the
+											printing and typesetting industry. Lorem Ipsum has been the industry's
+											standard dummy text ever since the 1500s. </p>
+										<span class="vertical-date">Yesterday <br><small>Dec 23</small></span>
+									</div>
+								</div>
+
+								<div class="vertical-timeline-block">
+									<div class="vertical-timeline-icon navy-bg">
+										<i class="fa fa-comments"></i>
+									</div>
+
+									<div class="vertical-timeline-content">
+										<h2>Chat with Monica and Sandra</h2>
+										<p>Web sites still in their infancy. Various versions have evolved over the
+											years, sometimes by accident, sometimes on purpose (injected humour and the
+											like). </p>
+										<span class="vertical-date">Yesterday <br><small>Dec 23</small></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id="panel-2" class="panel" data-panel-fullscreen="false">
+			<div class="panel-hdr">
+				<h2>
+					Smart Chat
+				</h2>
+			</div>
+			<div class="panel-container show">
+				<div class="panel-content p-0">
+					<div class="d-flex flex-column">
+						<div class="custom-scroll">
+							<div class="h-100">
+								<!-- message -->
+								<div class="d-flex flex-row px-3 pt-3 pb-2">
+									<!-- profile photo : lazy loaded -->
+									<span class="icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base-2 icon-stack-3x color-primary-400"></i>
+										<i class="base-10 text-white icon-stack-1x"></i>
+										<i class="ni md-profile color-primary-800 icon-stack-2x"></i>
+									</span>
+									<!-- profile photo end -->
+									<div class="ml-3">
+										<a href="javascript:void(0);" title="Lisa Hatchensen"
+											class="d-block fw-700 text-dark">Lisa Hatchensen</a>
+										Hey did you meet the new board of director? He's a bit of a geek if you ask
+										me...anyway here is the report you requested. I am off to launch with Lisa and
+										Andrew, you wanna join?
+										<!-- file download -->
+										<div class="d-flex mt-3 flex-wrap">
+
+											<div class="btn-group mr-1 mt-1" role="group"
+												aria-label="Button group with nested dropdown ">
+												<button type="button"
+													class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+													data-action="toggle">
+													<span class="d-block text-truncate text-truncate-sm">
+														<i class="fal fa-file-pdf mr-1 color-danger-700"></i>
+														Report-2013-demographic-repo
+													</span>
+												</button>
+												<div class="btn-group" role="group">
+													<button id="btnGroupDrop1" type="button"
+														class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+														data-toggle="dropdown" aria-haspopup="true"
+														aria-expanded="false"></button>
+													<div class="dropdown-menu p-0 fs-xs"
+														aria-labelledby="btnGroupDrop1">
+														<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+														<a class="dropdown-item px-3 py-2" href="#">Open</a>
+														<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+													</div>
+												</div>
+											</div>
+											<div class="btn-group mr-1 mt-1" role="group"
+												aria-label="Button group with nested dropdown ">
+												<button type="button"
+													class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+													data-action="toggle">
+													<span class="d-block text-truncate text-truncate-sm">
+														<i class="fal fa-file-pdf mr-1 color-danger-700"></i> Bloodworks
+														Patient 34124BA
+													</span>
+												</button>
+												<div class="btn-group" role="group">
+													<button id="btnGroupDrop2" type="button"
+														class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+														data-toggle="dropdown" aria-haspopup="true"
+														aria-expanded="false"></button>
+													<div class="dropdown-menu p-0 fs-xs"
+														aria-labelledby="btnGroupDrop2">
+														<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+														<a class="dropdown-item px-3 py-2" href="#">Open</a>
+														<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<!-- file download end -->
+									</div>
+								</div>
+								<!-- message end -->
+								<!-- message reply -->
+								<div class="d-flex flex-row px-3 pt-3 pb-2">
+									<!-- profile photo : lazy loaded -->
+
+									<span class="icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base-2 icon-stack-3x color-primary-400"></i>
+										<i class="base-10 text-white icon-stack-1x"></i>
+										<i class="ni md-profile color-primary-800 icon-stack-2x"></i>
+									</span>
+									<!-- profile photo end -->
+									<div class="ml-3">
+										<a href="javascript:void(0);" title="Lisa Hatchensen"
+											class="d-block fw-700 text-dark">{{user}}</a>
+										Thanks for the file! You guys go ahead, I have to call some of my patients.
+									</div>
+								</div>
+								<!-- message reply end -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+{{/inline}}
+
+{{#*inline "scripts-block"}}
+
+<script type="text/javascript">
+	/* Activate smart panels */
+	$('#js-page-content').smartPanel();
+</script>
+
+<!-- The order of scripts is irrelevant. Please check out the plugin pages for more details about these plugins below: -->
+<script src="js/dependency/moment/moment.js"></script>
+<script src="js/miscellaneous/jqvmap/jqvmap.bundle.js"></script>
+
+<script>
+	$(document).ready(function () {
+		//$('#js-page-content').smartPanel(); 
+	});
+</script>
+{{/inline}}
+
+{{/layouts/main}}
