@@ -8,9 +8,130 @@
 	<nav id="js-primary-nav" class="primary-nav" role="navigation">
 
 		{{> include/_nav-filter }}
-		{{> include/_nav-info-card }}	
-		{{> include/_nav }}
-		{{> include/_nav-filter-msg }}
+		{{> include/_nav-info-card }}
+		<!--{{> include/_nav }}-->
+
+
+		<div class="row">
+			<div class="col-xl-12 client-list">
+				<div class="card border m-2">
+					<!-- notice the additions of utility paddings and display properties on .card-header -->
+					<div class="card-header bg-info-500 d-flex align-items-center flex-wrap">
+						<!-- we wrap header title inside a span tag with utility padding -->
+						<a href="javascript:void(0);"
+							class="btn btn-outline-primary btn-icon rounded-circle mr-1 waves-effect waves-themed">
+							<i class="fal fa-cloud fs-md"></i>
+						</a>
+						<div class="card-title"> CN323131414</div>
+						<button class="btn btn-icon btn-xs btn-danger ml-auto fs-md" data-toggle="dropdown">
+							<i class="fal fa-exclamation-triangle"></i>
+						</button>
+						<button class="btn btn-xs btn-icon width-1 fs-xl btn-warning ml-1">
+							<i class="fal fa-truck"></i>
+						</button>
+					</div>
+					<div class="card-body">
+						<p class="card-text">
+							<span class="fs-lg">Nazwa klienta</span><br>
+							<span>Saldo: 432 800,32 zł</span><br>
+							<span>Limit kredytowy: 34 298,09 zł</span>
+						</p>
+					</div>
+				</div>
+				<div class="card border m-2">
+					<!-- notice the additions of utility paddings and display properties on .card-header -->
+					<div class="card-header bg-trans-gradient d-flex align-items-center flex-wrap">
+						<!-- we wrap header title inside a span tag with utility padding -->
+						<div class="card-title text-white">Cn32232323(company2)</div>
+						<button class="btn btn-success btn-sm btn-icon waves-effect waves-themed">
+							<i class="fal fa-truck"></i>
+						</button>
+						<button class="btn btn-icon btn-sm btn-warning ml-auto fs-md">
+							<i class="fal fa-exclamation-triangle"></i>
+						</button>
+					</div>
+					<div class="card-body">
+						<p class="card-text">
+							<h6>Nazwa klienta</h6>
+							<span>Saldo: 432 800,32 zł</span><br>
+							<span>Limit kredytowy: 34 298,09 zł</span>
+						</p>
+					</div>
+				</div>
+				<div class="card border m-2">
+					<!-- notice the additions of utility paddings and display properties on .card-header -->
+					<div class="card-header bg-danger-700 pr-3 d-flex align-items-center flex-wrap">
+						<!-- we wrap header title inside a div tag with utility padding -->
+						<div class="card-title">CN344234</div>
+					</div>
+					<ul class="list-group list-group-flush">
+						<span class="list-group-item">
+							<div class="row">
+								<div class="col-sm-9">
+									<span class="fs-xl">
+										<span>To jest bardzo długa nazwa klienta</span>
+									</span>
+								</div>
+								<div class="col-sm-3">
+									<span class="fs-xxl">
+										<div class='icon-stack'>
+											<i class="base base-2 icon-stack-3x opacity-100 color-info-500"></i> <i
+												class="fas icon-stack-1x opacity-100 color-white">A</i>
+										</div>
+									</span>
+								</div>
+							</div>
+						</span>
+						<li class="list-group-item">
+							<dl class="card-text row">
+								<dt class="col-sm-6 pr-0">Saldo</dt>
+								<dd class="col-sm-6 pl-0 text-right">1 543 432,32 zł</dd>
+								<dt class="col-sm-6 pr-0">Limit kredytowy</dt>
+								<dd class="col-sm-6 pl-0 text-right"><span class="text-danger"> 432 800,32 zł</span>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+				<div class="card border m-2">
+					<!-- notice the additions of utility paddings and display properties on .card-header -->
+					<div class="card-header bg-success-600 pr-3 d-flex align-items-center flex-wrap">
+						<!-- we wrap header title inside a div tag with utility padding -->
+						<div class="card-title">CN344234</div>
+					</div>
+					<ul class="list-group list-group-flush">
+						<span class="list-group-item">
+							<div class="row">
+								<div class="col-sm-9">
+									<span class="fs-xl">
+										<span>Nazwa klienta</span>
+									</span>
+								</div>
+								<div class="col-sm-3">
+									<span class="fs-xxl">
+										<div class='icon-stack'>
+											<i class="base base-2 icon-stack-3x opacity-100 color-info-500"></i> <i
+												class="fas icon-stack-1x opacity-100 color-white">A</i>
+										</div>
+									</span>
+								</div>
+							</div>
+						</span>
+						<li class="list-group-item">
+							<dl class="card-text row">
+								<dt class="col-sm-6 pr-0">Saldo</dt>
+								<dd class="col-sm-6 pl-0 text-right">1 543 432,32 zł</dd>
+								<dt class="col-sm-6 pr-0">Limit kredytowy</dt>
+								<dd class="col-sm-6 pl-0 text-right"><span class="text-danger"> 432 800,32 zł</span>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+
 	</nav>
 	<!-- END PRIMARY NAVIGATION -->
 

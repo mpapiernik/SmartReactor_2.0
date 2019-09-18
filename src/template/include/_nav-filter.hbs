@@ -1,8 +1,25 @@
 <div class="nav-filter">
-	<div class="position-relative">
-		<input type="text" id="nav_filter_input" placeholder="Filter menu" class="form-control" tabindex="0">
-		<a href="#" onclick="return false;" class="btn-primary btn-search-close js-waves-off" data-action="toggle" data-class="list-filter-active" data-target=".page-sidebar">
-			<i class="fal fa-chevron-up"></i>
-		</a>
+	<div class="filter">
+		<div class="position-relative">
+			<input type="text" id="nav_filter_input" placeholder="Filter menu" class="form-control" tabindex="0">
+			<a href="#" onclick="" class="btn-primary btn-search-close">
+				<i class="fal fa-filter"></i>
+			</a>
+		</div>
 	</div>
-</div> 
+	<div class="filter">
+		<div class="form-group">
+			<select class="form-control" id="nav_filter_select">
+				<option>Wybierz zdefiowany filtr</option>
+				<option>Monitoring</option>
+				<option>Windykacja wewnętrzna</option>
+				<option>Windykacja zewnętrzna</option>
+				<option>Postępowanie sądowe</option>
+			</select>
+		</div>
+	</div>
+
+</div>
+
+<div class="filter-message js-filter-message bg-success-600">showing 3 from 97 total</div>
+

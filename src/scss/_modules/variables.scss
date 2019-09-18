@@ -556,12 +556,12 @@ $frame-border-color:					#f7f9fa !default;
 $header-bg:								$white !default;
 $header-border-color:					#ccc !default;
 $header-border-bottom-color:			rgba(darken($primary-700, 10%), (13/100)) !default;		
-$header-link-color:						$primary-500 !default;
+$header-link-color:						$white !default;
 $header-link-hover-color:				darken($header-bg, 75%) !default;
 
 /* height */
-$header-height:							4.125rem !default;
-$header-height-nav-top:					4.125rem !default;
+$header-height:							3rem !default;
+$header-height-nav-top:					3rem !default;
 $header-inner-padding-x:				2rem !default;
 $header-inner-padding-y:				0 !default;
 
@@ -644,9 +644,9 @@ aside.page-sidebar ($nav-width, $nav-background)
 
 /* main navigation */
 /* left panel */
-$nav-background:						desaturate($primary-700, 7%) !default;
-$nav-background-shade:					rgba(desaturate($info-500, 15%), 0.18) !default;                  
-$nav-base-color:						lighten($primary-700, 7%) !default;
+$nav-background:						desaturate($primary-500, 7%) !default;
+$nav-background-shade:					rgba(desaturate($info-400, 15%), 0.18) !default;                  
+$nav-base-color:						lighten($primary-400, 7%) !default;
 $nav-width:								16.875rem !default; 
 
 /* nav parent level-0 */
@@ -696,7 +696,7 @@ $nav-top-drowndown-color:				$nav-link-color;
 $nav-top-drowndown-hover-color:			$white;
 
 /* nav Info Card (appears below the logo) */
-$nav-infocard-height:					9.530rem !default;
+$nav-infocard-height:					1.530rem !default;
 $profile-image-width:					3.125rem !default; 
 $profile-image-width-md:				2rem !default;
 $profile-image-width-sm:				1.5625rem !default;
