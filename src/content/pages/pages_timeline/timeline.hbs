@@ -11,17 +11,97 @@
 <link rel="stylesheet" media="screen, print" href="css/miscellaneous/jqvmap/jqvmap.bundle.css">
 <link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
 <link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
+<link rel="stylesheet" media="screen, print"
+	href="css/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.css">
 {{/inline}}
 
 {{#*inline "content-block"}}
 
 <div class="row">
-	<div class="col-lg-12">
-		<div id="panel-1" class="panel" data-panel-fullscreen="false">
+	<div class="col-lg-8">
+		<div id="panel-1" class="panel" data-panel-close="false" data-panel-fullscreen="false"
+			data-panel-collapsed="false" data-panel-color="false">
+
 			<div class="panel-hdr">
 				<h2>
 					Timeline
 				</h2>
+				<span class="text-sm text-muted">
+					<a data-toggle="modal" data-target="#calendarModal"
+						class="btn btn-icon rounded-circlewaves-effect waves-themed" data-toggle="tooltip"
+						data-placement="bottom" title="" data-original-title="Dodaj zadanie">
+						<i class="fas fa-calendar-plus fs-md"></i>
+					</a>
+					<a href="javascript:void(0);" class="btn btn-icon rounded-circlewaves-effect waves-themed"
+						data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Wyślij e-mail">
+						<i class="fas fa-at fs-md"></i>
+					</a>
+					<a href="javascript:void(0);" class="btn btn-icon waves-effect waves-themed" data-toggle="tooltip"
+						data-placement="bottom" title="" data-original-title="Wygneruj pismo">
+						<i class="fas fa-file-plus fs-md"></i>
+					</a>
+					<a href="javascript:void(0);" class="btn btn-icon waves-effect waves-themed" data-toggle="tooltip"
+						data-placement="bottom" title="" data-original-title="Dodaj notatkę">
+
+						<i class="fas fa-sticky-note fs-md"></i>
+					</a>
+					<a href="javascript:void(0);" class="btn btn-icon fs-lg waves-effect waves-themed"
+						data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Dodaj wiadomość">
+						<i class="fas fa-envelope fs-md"></i>
+					</a>
+					<a href="javascript:void(0);" class="btn btn-icon fs-lg waves-effect waves-themed"
+						data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Dodaj załącznik">
+
+						<i class="fas fa-paperclip"></i>
+					</a>
+					<a href="javascript:void(0);" class="btn btn-icon fs-lg waves-effect waves-themed"
+						data-toggle="tooltip" data-placement="bottom" title=""
+						data-original-title="Pobierz historię kontaktu">
+
+						<i class="fas fa-download"></i>
+					</a>
+				</span>
+				<div class="panel-toolbar ml-2">
+					<select class="custom-select custom-select-sm">
+						<option selected="">Wszystkie obiekty</option>
+						<option value="1">Zadanie</option>
+						<option value="2">E-mail</option>
+						<option value="3">Pismo</option>
+						<option value="4">Notatka</option>
+						<option value="5">Wiadomość</option>
+						<option value="6">Załącznik</option>
+					</select>
+					<select class="custom-select custom-select-sm ml-2">
+						<option>Wybierz zdefiowany filtr</option>
+						<option>Monitoring</option>
+						<option>Windykacja wewnętrzna</option>
+						<option>Windykacja zewnętrzna</option>
+						<option>Postępowanie sądowe</option>
+					</select>
+				</div>
+				<div class="panel-toolbar ml-2">
+					<div class="d-flex position-relative ml-auto" style="max-width: 8rem;">
+						<i class="fal fa-search position-absolute pos-left fs-lg px-2 py-1 mt-1 fs-xs"></i>
+						<input type="text" class="form-control form-control-sm pl-5" placeholder="Szukaj">
+						<a data-toggle="modal" data-target="#advancedSearchModal" class="btn-primary btn-search-close">
+							<i class="fal fa-filter"></i>
+						</a>
+					</div>
+				</div>
+
+				<div class="panel-toolbar">
+					<button class="btn btn-panel bg-transparent fs-xl w-auto h-auto rounded-0"
+						data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10"
+						data-original-title="Collapse"><i class="fal fa-window-minimize"></i></button>
+
+					<button class="btn btn-panel bg-transparent fs-xl w-auto h-auto rounded-0"
+						data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10"
+						data-original-title="Fullscreen"><i class="fal fa-expand"></i></button>
+
+					<button class="btn btn-panel bg-transparent fs-xl w-auto h-auto rounded-0" data-action="panel-close"
+						data-toggle="tooltip" data-offset="0,10" data-original-title="Close"><i
+							class="fal fa-times"></i></button>
+				</div>
 			</div>
 			<div class="panel-container show">
 				<div class="panel-content p-0">
@@ -53,19 +133,19 @@
 													<i class="fas fa-print"></i>
 												</a>
 												<a href="javascript:void(0);" id="js-delete-selected"
-													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Wyślij e-mail">
 													<i class="fas fa-at fs-md"></i>
 												</a>
 												<a href="javascript:void(0);" id="js-delete-selected"
-													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Usuń">
 													<i class="fas fa-trash fs-md"></i>
 												</a>
 												<a href="javascript:void(0);"
-													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Zrezygnuj z wykonania zadania">
 
@@ -268,13 +348,13 @@
 												</a>
 
 												<a href="javascript:void(0);" id="js-delete-selected"
-													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Usuń">
 													<i class="fas fa-trash fs-md"></i>
 												</a>
 												<a href="javascript:void(0);" id="js-delete-selected"
-													class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Podgląd dokumentu">
 													<i class="fas fa-paperclip fs-md"></i>
@@ -392,11 +472,11 @@
 												<i class="fas fa-print"></i>
 											</a>
 											<a href="javascript:void(0);" id="js-delete-selected"
-												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed">
+												class="btn btn-icon mr-1 waves-effect waves-themed">
 												<i class="fas fa-trash fs-md"></i>
 											</a>
 											<a href="javascript:void(0);"
-												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed">
+												class="btn btn-icon mr-1 waves-effect waves-themed">
 												<i class="fas fa-edit fs-md"></i>
 											</a>
 										</span>
@@ -426,13 +506,13 @@
 											</a>
 
 											<a href="javascript:void(0);" id="js-delete-selected"
-												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
 												data-toggle="tooltip" data-placement="bottom" title=""
 												data-original-title="Usuń">
 												<i class="fas fa-trash fs-md"></i>
 											</a>
 											<a href="javascript:void(0);" id="js-delete-selected"
-												class="btn btn-icon rounded-circle mr-1 waves-effect waves-themed"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
 												data-toggle="tooltip" data-placement="bottom" title=""
 												data-original-title="Podgląd dokumentu">
 												<i class="fas fa-paperclip fs-md"></i>
@@ -543,11 +623,158 @@
 				</div>
 
 			</div>
+
+			<!-- Modal Large -->
+			<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">Edycja zadania</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><i class="fal fa-times"></i></span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label class="form-label" for="example-select">Definicja zadania</label>
+								<select class="form-control" id="example-select">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="datepicker-modal-2">Data i czas zadania</label>
+								<div class="input-group">
+									<input type="text" id="datepicker-modal-2" class="form-control"
+										placeholder="End date" aria-label="date" aria-describedby="datepicker-modal-2">
+									<div class="input-group-append">
+										<span class="input-group-text fs-xl"><i class="fal fa-calendar-alt"></i></span>
+									</div>
+								</div>
+								<span class="help-block">Data planowania i czas na realizacje zadania</span>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="example-textarea">Zaplanowane czynności</label>
+								<textarea class="form-control" id="example-textarea" rows="3"></textarea>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="example-textarea">Dodatkowy opis</label>
+								<textarea class="form-control" id="example-textarea" rows="3"></textarea>
+							</div>
+							<div class="form-group">
+								<label class="form-label">Wykonawca</label>
+								<div class="row">
+									<div class="col">
+										<div class="frame-wrap">
+											<div class="demo">
+												<div class="custom-control custom-radio">
+													<input type="radio" class="custom-control-input"
+														id="defaultUncheckedRadio" name="defaultExampleRadios">
+													<label class="custom-control-label"
+														for="defaultUncheckedRadio">Wybierz
+														pracownika ręcznie</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input type="radio" class="custom-control-input"
+														id="defaultCheckedRadio" name="defaultExampleRadios" checked="">
+													<label class="custom-control-label"
+														for="defaultCheckedRadio">Wybierz
+														pracownika na podstawie zasad przydzielania
+														zadań</label>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="form-group">
+											<label class="form-label" for="example-select">Pracownik</label>
+											<select class="form-control" id="example-select">
+												<option>Pracownik 1</option>
+												<option>Pracownik 2</option>
+												<option>Pracownik 3</option>
+												<option>Pracownik 4</option>
+												<option>Pracownik 5</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="example-static">Zlecający</label>
+								<input type="text" readonly="" class="form-control-plaintext" id="example-static"
+									value="email@example.com">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="example-static">Twórca</label>
+								<input type="text" readonly="" class="form-control-plaintext" id="example-static"
+									value="email@example.com">
+							</div>
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+							<button type="button" class="btn btn-success">Zapisz</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal Large end -->
+
+			<!-- Modal Large -->
+			<div class="modal fade" id="advancedSearchModal" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title">filtry zaawansowane</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><i class="fal fa-times"></i></span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label class="form-label" for="example-select">Definicja zadania</label>
+								<select class="form-control" id="example-select">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="datepicker-modal-1">Zakres dat </label>
+								<div class="input-group">
+									<input type="text" id="datepicker-modal-1" class="form-control"
+										placeholder="End date" aria-label="date" aria-describedby="datepicker-modal-1">
+									<div class="input-group-append">
+										<span class="input-group-text fs-xl"><i class="fal fa-calendar-alt"></i></span>
+									</div>
+								</div>
+								<span class="help-block">Data czas stworzenia obiektu lub planowania zadania</span>
+							</div>
+
+
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+							<button type="button" class="btn btn-success">Zastosuj</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal Large end -->
+
+
 		</div>
+	</div>
+	<div class="col-lg-4">
 		<div id="panel-2" class="panel" data-panel-fullscreen="false">
 			<div class="panel-hdr">
 				<h2>
-					Smart Chat
+					Szczegóły
 				</h2>
 			</div>
 			<div class="panel-container show">
@@ -568,7 +795,8 @@
 										<a href="javascript:void(0);" title="Lisa Hatchensen"
 											class="d-block fw-700 text-dark">Lisa Hatchensen</a>
 										Hey did you meet the new board of director? He's a bit of a geek if you ask
-										me...anyway here is the report you requested. I am off to launch with Lisa and
+										me...anyway here is the report you requested. I am off to launch with Lisa
+										and
 										Andrew, you wanna join?
 										<!-- file download -->
 										<div class="d-flex mt-3 flex-wrap">
@@ -602,7 +830,8 @@
 													class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
 													data-action="toggle">
 													<span class="d-block text-truncate text-truncate-sm">
-														<i class="fal fa-file-pdf mr-1 color-danger-700"></i> Bloodworks
+														<i class="fal fa-file-pdf mr-1 color-danger-700"></i>
+														Bloodworks
 														Patient 34124BA
 													</span>
 												</button>
@@ -665,10 +894,29 @@
 <script src="js/dependency/moment/moment.js"></script>
 <script src="js/miscellaneous/jqvmap/jqvmap.bundle.js"></script>
 
+<script src="js/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.js"></script>
+
 <script>
 	$(document).ready(function () {
-		//$('#js-page-content').smartPanel(); 
+
+		$('#datepicker-modal-1').daterangepicker({
+			timePicker: true,
+			startDate: moment().startOf('hour'),
+			endDate: moment().startOf('hour').add(32, 'hour'),
+			locale: {
+				format: 'M/DD hh:mm A'
+			}
+		});
+			$('#datepicker-modal-2').daterangepicker({
+			timePicker: true,
+			startDate: moment().startOf('hour'),
+			endDate: moment().startOf('hour').add(32, 'hour'),
+			locale: {
+				format: 'M/DD hh:mm A'
+			}
+		});
 	});
+
 </script>
 {{/inline}}
 

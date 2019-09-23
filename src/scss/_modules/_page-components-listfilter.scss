@@ -8,7 +8,7 @@
 	width: calc(100% - 60px);
 	max-width: 180px;
 	border-radius: $border-radius;
-	margin: $p-3 auto;
+	margin: 0.5rem auto;
 
 	&:empty {
 		display: none;

@@ -25,7 +25,9 @@
 		}
 
 		&:focus {
+			background: lighten($nav-background, 5%);
 			border-color: lighten($nav-background, 13%);
+			color: $white;
 		}
 		
 	}
@@ -84,6 +86,13 @@
 		display:block;
 	}
 
+	.nav-arrow-up {
+		display:block;
+	}
+	.nav-arrow-down {
+		display:none;
+	}
+
 }
 
 /* only show filter message if lister filter is active */
@@ -91,6 +100,12 @@
 	.filter-message {
 		display: none;
 	}	
+	.nav-arrow-up {
+		display:none;
+	}
+	.nav-arrow-down {
+		display:block;
+	}
 }
 
 @include media-breakpoint-up(lg) {

@@ -7,68 +7,19 @@
 
 	{{#if appLayoutShortcut}}
 	<!-- DOC: nav menu layout change shortcut -->
-	
+
 	{{/if}}
 
-	<!-- DOC: mobile button appears during mobile width -->
-	<div class="hidden-lg-up">
-		<a href="#" class="header-btn btn press-scale-down" data-action="toggle" data-class="mobile-nav-on">
-			<i class="ni ni-menu"></i>
-		</a>
-	</div>
-
-	<div class="ml-auto d-flex">
-		<div class="hidden-md-down dropdown-icon-menu position-relative">
+	<div class="mr-auto hidden-md-down dropdown-icon-menu position-relative">
 		<a href="#" class="header-btn btn js-waves-off" data-action="toggle" data-class="nav-function-hidden"
-			title="Hide Navigation">
-			<i class="ni ni-menu"></i>
+			title="Hide Client List">
+			<i class="ni ni-minify-nav"></i>
 		</a>
-		<ul>
-			<li>
-				<a href="#" class="btn js-waves-off" data-action="toggle" data-class="nav-function-minify"
-					title="Minify Navigation">
-					<i class="ni ni-minify-nav"></i>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="btn js-waves-off" data-action="toggle" data-class="nav-function-fixed"
-					title="Lock Navigation">
-					<i class="ni ni-lock-nav"></i>
-				</a>
-			</li>
-		</ul>
 	</div>
 
-		<div>
-			<a href="#" title="Historia kontaktu" data-filter-tags="historia kontaktu"class="header-icon">
-				<i class="fal fa-calendar-alt"></i>
-				<span class="nav-link-text" data-i18n="nav.historia_kontaktu">Historia kontaktu</span>
-			</a>
-		</div>
+	<div class="ml-auto d-flex nav-menu-wrapper">
 
-		<div>
-			<a href="#" class="header-icon">
-				<i class="fal fa-wrench"></i>
-			</a>
-		</div>
-
-		<div>
-			<a href="#" class="header-icon">
-				<i class="fal fa-cog"></i>
-			</a>
-		</div>
-
-
-		{{#if layoutSettings}}
-		<!-- app settings -->
-		<div class="hidden-md-down">
-			<a href="#" class="header-icon" data-toggle="modal" data-target=".js-modal-settings">
-				<i class="fal fa-cog"></i>
-			</a>
-		</div>
-		{{/if}}
-
-
+			{{> include/_nav }}
 
 		<!-- app user menu -->
 		<div>
