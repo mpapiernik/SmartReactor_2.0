@@ -19,8 +19,8 @@
 			> a {
 				display: block;
 				color:lighten($nav-background, 25%);
-				height:$footer-height - 1;
-				line-height: $footer-height - 1;
+				height:$footer-height;
+				line-height: $footer-height;
 				margin-top: 1px;
 				padding: 0 13px;
 				overflow: visible;

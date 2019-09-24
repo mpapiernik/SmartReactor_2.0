@@ -12,7 +12,7 @@ var menu = func.fillProperties({
 // push nav objects
 gulp.task("build-nav", function (done) {
 	console.log('==================> Generating nav.hbs...');
-	func.writeNavigation(menu, build.config.path.exportPath);
+//	func.writeNavigation(menu, build.config.path.exportPath);
 	func.formatOutput({
 		inputPath: build.config.path.exportPath,
 		outputPath: build.config.path.outputPath

@@ -65,7 +65,7 @@
 
 
 	.nav-function-hidden.header-function-fixed:not(.nav-function-top) {
-		.page-header {
+		.page-header, .page-footer {
 			margin-left: $nav-hidden-visiblity; 
 		}
 	}

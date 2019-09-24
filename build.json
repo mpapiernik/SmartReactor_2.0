@@ -13,7 +13,7 @@
 			"bs4v": "4.3",
 			"logo": "logo.png",
 			"logo-m": "logo.png",
-			"copyright": "2019 © Reactor by&nbsp;<a href='https://www.gotbootstrap.com' class='text-primary fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>",
+			"copyright": "2019 © Reactor",
 			"copyright-inverse": "2019 © SmartAdmin by&nbsp;<a href='https://www.gotbootstrap.com' class='text-white opacity-40 fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>",
 			"layoutSettings": true,
 			"chatInterface": true,

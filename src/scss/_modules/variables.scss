@@ -756,9 +756,9 @@ $msgr-animation-delay:					100ms;
 
 /*   FOOTER
 ========================================================================== */
-$footer-bg:								$white !default;
+$footer-bg:								transparent !default;
 $footer-text-color:						darken($base-text-color, 10%);
-$footer-height:							2.8125rem !default;
+$footer-height:							1.875rem !default;
 $footer-font-size:						$fs-base !default;
 $footer-zindex:							$cloud - 20 !default;
 

@@ -1,61 +1,102 @@
 <!DOCTYPE html>
+
 {{> include/_copyright-header}}
 <html lang="en">
-	<head>
-		{{> include/_head}}
 
-		{{!-- Optional: page related CSS --}}
-		{{#>head-block}}{{/head-block}}
-	</head>
-	<body class="mod-bg-1 {{preemptiveclass}}">
-		
-		{{!-- save-settings-script --}}
-		{{> include/_scripts-loading-saving}}
-		
-		<!-- BEGIN Page Wrapper -->
-		<div class="page-wrapper">
+<head>
+	{{> include/_head}}
 
-			<div class="page-inner">
+	{{!-- Optional: page related CSS --}}
+	{{#>head-block}}{{/head-block}}
+</head>
 
-				{{> include/_left-panel }}
+<body class="mod-bg-1 header-function-fixed">
 
-				<div class="page-content-wrapper">
-					
-					{{> include/_page-header }}
+	{{!-- save-settings-script --}}
+	{{> include/_scripts-loading-saving}}
 
-					<!-- BEGIN Page Content -->
-					<!-- the #js-page-content id is needed for some plugins to initialize -->
-                    <main id="js-page-content" role="main" class="page-content">
-                        {{#>content-block}}{{/content-block}}
-                    </main>
-					{{> include/_page-content-overlay }}
-					<!-- END Page Content -->
+	<!-- BEGIN Page Wrapper -->
+	<div class="page-wrapper">
 
-					{{> include/_page-footer }}
+		<div class="page-inner">
 
-					{{> include/_shortcut-modal }}
+			{{> include/_left-panel }}
 
-					{{> include/_color-profile-reference }}
-					
+			<div class="page-content-wrapper">
+
+				{{> include/_page-header }}
+
+				<!-- BEGIN Page Content -->
+				<!-- the #js-page-content id is needed for some plugins to initialize -->
+				<main id="js-page-content" role="main" class="page-content">
+					{{#>content-block}}{{/content-block}}
+				</main>
+				{{> include/_page-content-overlay }}
+				<!-- END Page Content -->
+
+				{{> include/_page-footer }}
+
+				{{> include/_shortcut-modal }}
+
+				{{> include/_color-profile-reference }}
+
+
+
+
+				<!-- Modal Large -->
+				<div class="modal fade" id="clientAdvancedSearchModal" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Filtry zaawansowane</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true"><i class="fal fa-times"></i></span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="form-group">
+									<label class="form-label" for="example-select">Klasa klienta</label>
+									<select class="form-control" id="example-select">
+										<option>A</option>
+										<option>B</option>
+										<option>C</option>
+										<option>D</option>
+										<option>E</option>
+									</select>
+								</div>
+								...
+
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+								<button type="button" class="btn btn-success" data-dismiss="modal">Zastosuj</button>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- Modal Large end -->
 
 			</div>
 
 		</div>
-		<!-- END Page Wrapper -->
-		
-		{{> include/_shortcut-menu }}
-		
-		{{> include/_shortcut-messenger }}
 
-		{{> include/_page-settings }}
+	</div>
+	<!-- END Page Wrapper -->
 
-		{{!-- Google Analytics  code if GOOGLE_ANALYTICS_ID id available --}}
-		{{> include/_google_analytics }}
-		
-		{{> include/_scripts-base-plugins}}
-		{{#>scripts-block}}
-			{{!-- Custom scripts per page can be added. --}}
-		{{/scripts-block}}
-	</body>
+	{{> include/_shortcut-menu }}
+
+	{{> include/_shortcut-messenger }}
+
+	{{> include/_page-settings }}
+
+	{{!-- Google Analytics  code if GOOGLE_ANALYTICS_ID id available --}}
+	{{> include/_google_analytics }}
+
+	{{> include/_scripts-base-plugins}}
+	{{#>scripts-block}}
+	{{!-- Custom scripts per page can be added. --}}
+	{{/scripts-block}}
+</body>
+
 </html>
