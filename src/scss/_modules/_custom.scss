@@ -80,7 +80,7 @@
 
 .vertical-timeline-block {
   position: relative;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 .vertical-timeline-block:after {
@@ -171,14 +171,10 @@
   clear: both;
 }
 
-.vertical-timeline-content h2 {
-  font-weight: 400;
-  margin-top: 4px;
-}
 
 .vertical-timeline-content p {
-  margin: 1em 0;
-  line-height: 1.6;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .vertical-timeline-content .vertical-client {
