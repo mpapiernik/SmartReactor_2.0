@@ -85,6 +85,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-data": "^1.2.1",
+    "gulp-gh-pages": "^0.5.4",
     "gulp-hb": "^8.0.0",
     "gulp-if": "^2.0.2",
     "gulp-order": "^1.2.0",
