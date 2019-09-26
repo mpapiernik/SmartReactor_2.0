@@ -5,37 +5,23 @@
 			<span class="nav-link-text" data-i18n="nav.na_dzis">Na dziś</span>
 		</a>
 		<ul>
-			<li {{#is pagename "===" "miscellaneous_fullcalendar"}}class="active" {{/is}}>
-				<a href="miscellaneous_fullcalendar.html" title="Kalendarz" data-filter-tags="historia kontaktu kalendarz">
-					<span class="nav-link-text" data-i18n="nav.historia_kontaktu_kalendarz">* Kalendarz</span>
+			<li>
+				<a href="miscellaneous_fullcalendar.html" title="Timeline" data-filter-tags="">
+					<span class="py-1 px-2 bg-primary-400 mr-2 rounded-circle"> <i class="fal fa-calendar-edit"></i></span>
+					<span class="nav-link-text" data-i18n="nav.timeline">* Kalendarz</span>
 				</a>
 			</li>
-			<li {{#is pagename "===" "timeline"}}class="active" {{/is}}>
-				<a href="timeline.html" title="Timeline" data-filter-tags="historia kontaktu timeline">
-					<span class="nav-link-text" data-i18n="nav.historia_kontaktu_timeline">* Timeline</span>
+			<li>
+				<a href="timeline.html" title="Timeline" data-filter-tags="">
+					<span class="py-1 px-2 bg-primary-400 mr-2 rounded-circle"> <i class="fal fa-history"></i></span>
+					<span class="nav-link-text" data-i18n="nav.timeline">* Historia kontaktu</span>
 				</a>
 			</li>
-			<li {{#is pagename "in" "page_inbox_general,page_inbox_read,page_inbox_write"}}class="active open" {{/is}}>
-				<a href="#" title="Web mail" data-filter-tags="web mail">
+			<li>
+				<a href="page_inbox_general.html" title="Web-mail" data-filter-tags="">
+					<span class="py-1 px-2 bg-primary-400 mr-2 rounded-circle"> <i class="fal fa-at"></i></span>
 					<span class="nav-link-text" data-i18n="nav.web_mail">* Web mail</span>
 				</a>
-				<ul>
-					<li {{#is pagename "===" "page_inbox_general"}}class="active" {{/is}}>
-						<a href="page_inbox_general.html" title="General" data-filter-tags="web mail general">
-							<span class="nav-link-text" data-i18n="nav.web_mail_general">General</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_inbox_read"}}class="active" {{/is}}>
-						<a href="page_inbox_read.html" title="Read" data-filter-tags="web mail read">
-							<span class="nav-link-text" data-i18n="nav.web_mail_read">Read</span>
-						</a>
-					</li>
-					<li {{#is pagename "===" "page_inbox_write"}}class="active" {{/is}}>
-						<a href="page_inbox_write.html" title="Write" data-filter-tags="web mail write">
-							<span class="nav-link-text" data-i18n="nav.web_mail_write">Write</span>
-						</a>
-					</li>
-				</ul>
 			</li>
 			<li>
 				<a title="Wszystkie faktury" data-filter-tags="">

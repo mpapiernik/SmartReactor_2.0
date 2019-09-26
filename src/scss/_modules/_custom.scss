@@ -367,10 +367,16 @@
   }
 }
 
+.vertical-timeline-content {
+
+  .btn-icon {
+    line-height: 1.47;
+  }
+}
+
 .hidden-client-amount {
 
-  .vertical-timeline-content .vertical-client .card, .client-list {
-
+  .client-list {
     .list-group-item:last-child {
       display: none;
     }
@@ -644,14 +650,13 @@
   top: 0;
 }
 
-.page-content-wrapper {
+body.margin-left .page-content-wrapper {
   margin-left: $nav-width;
 }
 
 body.nav-function-hidden .page-content-wrapper {
   margin-left: 0px;
 }
-
 
 .page-footer {
   color: #f5f5f5 !important;
@@ -673,6 +678,7 @@ body.nav-function-hidden .page-content-wrapper {
   color: #f5f5f5 !important;
 
 }
+
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {

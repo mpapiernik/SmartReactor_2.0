@@ -7,6 +7,8 @@
 
 {{#*inline "head-block"}}
 <link rel="stylesheet" media="screen, print" href="css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
+<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
+<link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
 <link rel="stylesheet" media="screen, print"
 	href="css/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.css">
 
@@ -18,76 +20,80 @@
 {{!-- Your main content goes here --}}
 <div class="row">
 	<div class="col-xl-12">
-		<div class="input-group mb-5 shadow-1 rounded">
-			<input type="text" class="form-control shadow-inset-2" id="filter-icon" aria-label="type 2 or more letters"
-				placeholder="Search anything..." value="{{app-name}} responsive webapp">
-			<div class="input-group-append">
-				<button class="btn btn-primary hidden-sm-down" type="button"><i class="fal fa-search mr-lg-2"></i><span
-						class="hidden-md-down">Szukaj</span></button>
-				<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-					data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					<span class="sr-only">Toggle Dropdown</span>
-				</button>
-				<div class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="#">Data</a>
-					<a class="dropdown-item" href="#">Images</a>
-					<a class="dropdown-item" href="#">Users</a>
-					<div role="separator" class="dropdown-divider"></div>
-					<a class="dropdown-item active" href="#">Everything</a>
-				</div>
-			</div>
-		</div>
-		<div class="d-flex px-3 px-sm-5 py-4">
-			<div class="custom-control custom-switch d-inline-flex">
-				<input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
-				<label class="custom-control-label fw-500 text-dark" for="customSwitch1"><span
-						class="hidden-sm-down">Activate</span> Location</label>
-			</div>
-			<div class="d-inline-block">
-				<a href="javascript:void(0);" class="text-dark fw-500 dropdown-toggle ml-4" data-toggle="dropdown">Safe
-					Search: Moderate</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item px-3 py-2" href="#">
-						<p class="m-0">Strict</p>
-						<p class="m-0 opacity-50">No Adult Content</p>
-					</a>
-					<a class="dropdown-item active px-3 py-2" href="#">
-						<p class="m-0">Moderate</p>
-						<p class="m-0 opacity-50">No explicit video or images</p>
-					</a>
-					<a class="dropdown-item px-3 py-2" href="#">
-						<p class="m-0">Off</p>
-						<p class="m-0 opacity-50">Don't filter adult content</p>
-					</a>
-				</div>
-			</div>
-			<div class="d-inline-block">
-				<a href="javascript:void(0);" class="text-dark fw-500 dropdown-toggle ml-4" data-toggle="dropdown">All
-					Types</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item px-3 py-2" href="#">Data</a>
-					<a class="dropdown-item px-3 py-2" href="#">Images</a>
-					<a class="dropdown-item px-3 py-2" href="#">Media</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item px-3 py-2 active" href="#">All</a>
-				</div>
-			</div>
-		</div>
-
 		<div id="panel-1" class="panel">
 			<div class="panel-hdr">
 				<h2>
 					Historia kontaktu
 				</h2>
-
-				<ul class="nav nav-pills border-bottom-0 pull-left" role="tablist">
-					<li class="nav-item">
-						<a class="nav-link active" data-toggle="tab" href="#pill_default-1" role="tab">Kalendarz</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#pill_default-2" role="tab">Timeline</a>
-					</li>
-				</ul>
+				<span class="text-sm text-muted mr-auto">
+					<span data-toggle="modal" data-target="#calendarModal">
+						<a href="javascript:void(0);" class="btn btn-icon rounded-circlewaves-effect waves-themed"
+							data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Dodaj zadanie">
+							<i class="fas fa-calendar-plus fs-md"></i>
+						</a>
+					</span>
+					<span data-toggle="modal" data-target="">
+						<a href="javascript:void(0);" class="btn btn-icon rounded-circlewaves-effect waves-themed"
+							data-toggle="tooltip" data-placement="bottom" title=""
+							data-original-title="Wydrukuj dokumenty na dziś">
+							<i class="fas fa-print fs-md"></i>
+						</a>
+					</span>
+				</span>
+				<div class="custom-control custom-switch d-inline-flex">
+					<input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+					<label class="custom-control-label fw-500 text-dark" for="customSwitch1"><span
+							class="hidden-sm-down">Ukryj zrealizowane zadania</span></label>
+				</div>
+				<div class="d-inline-block">
+					<a href="javascript:void(0);" class="text-dark fw-500 dropdown-toggle ml-4"
+						data-toggle="dropdown">Wybierz zdefiniowany filtr</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item px-3 py-2" href="#">
+							<p class="m-0">Strict</p>
+							<p class="m-0 opacity-50">No Adult Content</p>
+						</a>
+						<a class="dropdown-item active px-3 py-2" href="#">
+							<p class="m-0">Moderate</p>
+							<p class="m-0 opacity-50">No explicit video or images</p>
+						</a>
+						<a class="dropdown-item px-3 py-2" href="#">
+							<p class="m-0">Off</p>
+							<p class="m-0 opacity-50">Don't filter adult content</p>
+						</a>
+					</div>
+				</div>
+				<div class="d-inline-block">
+					<a href="javascript:void(0);" class="text-dark fw-500 dropdown-toggle ml-4"
+						data-toggle="dropdown">All
+						Types</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item px-3 py-2" href="#">Zadania</a>
+						<a class="dropdown-item px-3 py-2" href="#">Notatki</a>
+						<a class="dropdown-item px-3 py-2" href="#">Wiadomości systemowe</a>
+						<a class="dropdown-item px-3 py-2" href="#">Załączniki</a>
+						<a class="dropdown-item px-3 py-2" href="#">E-maile </a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item px-3 py-2 active" href="#">Wszystkie</a>
+					</div>
+				</div>
+				<div class="panel-toolbar ml-2">
+					<select class="custom-select custom-select-sm">
+						<option selected="">Odbiorca</option>
+						<option value="1">Admin </option>
+						<option value="2">Ewa Starosta</option>
+						<option value="3">Anna Nowak</option>
+					</select>
+				</div>
+				<div class="panel-toolbar ml-2">
+					<div class="d-flex position-relative ml-auto" style="width: 20rem;">
+						<i class="fal fa-search position-absolute pos-left fs-lg px-2 py-1 mt-1 fs-xs"></i>
+						<input type="text" class="form-control form-control-sm pl-5" placeholder="Szukaj">
+						<a data-toggle="modal" data-target="#advancedSearchModal" class="btn-primary btn-search-close">
+							<i class="fal fa-filter color-white"></i>
+						</a>
+					</div>
+				</div>
 
 				<div class="panel-toolbar">
 					<button class="btn btn-panel bg-transparent fs-xl w-auto h-auto rounded-0"
@@ -106,11 +112,8 @@
 			<div class="panel-container show">
 				<div class="panel-content">
 					<!-- Large modal -->
-					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#calendarModal">Dodaj
-						zadanie</button>
+
 					<div id="calendar"></div>
-
-
 					<!-- Modal Large -->
 					<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-hidden="true">
 						<div class="modal-dialog modal-lg" role="document">
@@ -229,7 +232,10 @@
 	DOC: Parse, validate, manipulate, and display dates and times in JavaScript. (https://momentjs.com/) -->
 <script src="js/dependency/moment/moment.js"></script>
 <script src="js/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.js"></script>
-<script>
+<script type="text/javascript">
+	// push settings with "false" save to local
+	initApp.pushSettings("margin-left", false);
+
 	$(document).ready(function () {
 
 		$('#datepicker-modal-3').daterangepicker({
@@ -252,6 +258,9 @@
 				+ src/../bootstrap-main-cust.js (core) -->
 <script src="js/miscellaneous/fullcalendar/fullcalendar.bundle.js"></script>
 <!-- BS JavaScript -->
+
+
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
@@ -267,7 +276,8 @@
 		var calendarEl = document.getElementById('calendar');
 
 		var calendar = new FullCalendar.Calendar(calendarEl, {
-			plugins: ['dayGrid', 'list', 'timeGrid', 'interaction', 'bootstrap'],
+			plugins: ['dayGrid', 'list', 'timeGrid', 'interaction', 'bootstrap', 'core'],
+			locale: 'pl',
 			themeSystem: 'bootstrap',
 			timeZone: 'UTC',
 			dateAlignment: "month", //week, month
@@ -285,7 +295,7 @@
 			},
 			navLinks: true,
 			header: {
-				left: 'prev,next today addEventButton printTodayDocs',
+				left: 'prev,next today addEventButton',
 				center: 'title',
 				right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
 			},
@@ -296,7 +306,7 @@
 			},
 			customButtons: {
 				addEventButton: {
-					text: '+ Dodaj zadanie',
+					text: '+',
 					click: function () {
 						var dateStr = prompt('Enter a date in YYYY-MM-DD format');
 						var date = new Date(dateStr + 'T00:00:00'); // will be in local time
@@ -312,19 +322,11 @@
 							alert('Invalid date.');
 						}
 					}
-				},
-				printTodayDocs: {
-					text: 'Wydrukuj dokumenty na dzisiaj',
-					click: function () {
-						console.log(2);
-						document.getElementById("calendarModal").modal('show');
-
-					}
 				}
 			},
-			//height: 700,
+			//contentHeight: 800,
 			editable: true,
-			eventLimit: true, // allow "more" link when too many events
+			eventLimit: false, // allow "more" link when too many events
 			views: {
 				sevenDays: {
 					type: 'agenda',
@@ -353,9 +355,27 @@
 					className: "bg-white border-primary text-primary"
 				},
 				{
+					title: 'Birthday Party',
+					start: YM + '-02T13:30:00',
+					end: YM + '-T13:30:00',
+					className: "color-success-300 text-white"
+				},
+				{
+					title: 'Coffee',
+					start: YM + '-02T09:00:00',
+					end: YM + '-02T09:30:00',
+					className: "bg-info text-white"
+				},
+				{
+					title: 'Meeting with Paul',
+					start: YM + '-02T13:30:00',
+					end: YM + '-02T15:30:00',
+					className: "bg-danger text-white"
+				},
+				{
 					title: 'Company Trip',
-					start: YM + '-02',
-					end: YM + '-03',
+					start: YM + '-05',
+					end: YM + '-06',
 					className: "bg-primary border-primary text-white"
 				},
 				{
@@ -366,19 +386,20 @@
 				},
 				{
 					title: 'Dinner',
-					start: YM + '-12',
-					end: YM + '-10'
+					start: YM + '-02',
+					end: YM + '-03',
+					className: "bg-danger border-danger text-white"
 				},
 				{
 					id: 999,
 					title: 'Repeating Event',
-					start: YM + '-09T16:00:00',
+					start: YM + '-05T16:00:00',
 					className: "bg-danger border-danger text-white"
 				},
 				{
 					id: 1000,
 					title: 'Repeating Event',
-					start: YM + '-16T16:00:00'
+					start: YM + '-7T16:00:00'
 				},
 				{
 					title: 'Conference',
@@ -412,11 +433,7 @@
 					start: TODAY + 'T20:00:00',
 					className: "bg-danger border-danger text-white"
 				},
-				{
-					title: 'Birthday Party',
-					start: TOMORROW + 'T07:00:00',
-					className: "bg-primary text-white border-primary text-white"
-				},
+				
 				{
 					title: 'Gotbootstrap Meeting',
 					url: 'http://gotbootstrap.com/',
@@ -438,6 +455,12 @@
 				localStorage.setItem('calendarDefaultView',view.name);
 				$('.fc-toolbar .btn-primary').removeClass('btn-primary').addClass('btn-outline-secondary');
 			},*/
+
+			eventClick: function (info) {
+				alert('Event: ' + info.event.title);
+				// change the border color just for fun
+				info.el.style.borderColor = 'red';
+			}
 
 		});
 

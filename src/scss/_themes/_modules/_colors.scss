@@ -147,3 +147,26 @@
 @include paint-gradient($warning-900, bg-warning-gradient);
 @include paint-gradient($success-900, bg-success-gradient);
 @include paint-gradient($fusion-900, bg-fusion-gradient);
+
+//gray
+@include brush($gray-50, color-gray-50);
+@include brush($gray-100, color-gray-100);
+@include brush($gray-200, color-gray-200);
+@include brush($gray-300, color-gray-300);
+@include brush($gray-400, color-gray-400);
+@include brush($gray-500, color-gray-500);
+@include brush($gray-600, color-gray-600);
+@include brush($gray-700, color-gray-700);
+@include brush($gray-800, color-gray-800);
+@include brush($gray-900, color-gray-900);
+
+@include paint($gray-50, color-gray-50);
+@include paint($gray-100, color-gray-100);
+@include paint($gray-200, color-gray-200);
+@include paint($gray-300, color-gray-300);
+@include paint($gray-400, color-gray-400);
+@include paint($gray-500, color-gray-500);
+@include paint($gray-600, color-gray-600);
+@include paint($gray-700, color-gray-700);
+@include paint($gray-800, color-gray-800);
+@include paint($gray-900, color-gray-900);

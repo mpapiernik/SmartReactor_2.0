@@ -19,20 +19,7 @@
 		{
 			"title": "Web mail",
 			"icon": "fal fa-envelope",
-			"items": [
-				{
-					"title": "General",
-					"href": "page_inbox_general.html"
-				},
-				{
-					"title": "Read",
-					"href": "page_inbox_read.html"
-				},
-				{
-					"title": "Write",
-					"href": "page_inbox_write.html"
-				}
-			]
+			"href": "page_inbox_general.html"
 		},
 		
 		{

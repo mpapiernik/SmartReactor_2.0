@@ -2,7 +2,7 @@
 	layouts/main 
 	title="Timeline" 
 	pagename="timeline" 
-	category_1="Application Intel" 
+	category_1="Historia kontaktu" 
 }}
 
 {{#*inline "head-block"}}
@@ -18,21 +18,21 @@
 {{#*inline "content-block"}}
 
 <div class="row">
-	<div class="col-lg-8">
+	<div class="col-lg-12 col-xl-9">
 		<div id="panel-1" class="panel" data-panel-close="false" data-panel-fullscreen="false"
-			data-panel-collapsed="false" data-panel-color="false">
+			data-panel-collapsed="false" data-panel-color="false" data-panel-master-button="false">
 
 			<div class="panel-hdr">
-				<h2>
+				<h2 class="ml-0">
 					Timeline
 				</h2>
 
 				<div class="custom-control custom-checkbox py-2">
-                                                <input type="checkbox" class="custom-control-input"  id="hideClient">
-                                                <label class="custom-control-label" for="hideClient">per klient</label>
-                                            </div>
-					
-				<span class="text-sm text-muted">
+					<input type="checkbox" class="custom-control-input" id="hideClient">
+					<label class="custom-control-label" for="hideClient">Klient</label>
+				</div>
+
+				<span class="text-sm text-muted ml-1">
 
 					<span data-toggle="modal" data-target="#addTaskModal">
 						<a href="javascript:void(0);" class="btn btn-icon rounded-circlewaves-effect waves-themed"
@@ -71,9 +71,9 @@
 						<i class="fas fa-download"></i>
 					</a>
 				</span>
-				<div class="panel-toolbar ml-2">
-					<select class="custom-select custom-select-sm">
-						<option selected="">Wszystkie obiekty</option>
+				<div class="panel-toolbar">
+					<select class="custom-select custom-select-sm "style="max-width: 8rem;">
+						<option selected="">Obiekty</option>
 						<option value="1">Zadanie</option>
 						<option value="2">E-mail</option>
 						<option value="3">Pismo</option>
@@ -81,8 +81,8 @@
 						<option value="5">Wiadomość</option>
 						<option value="6">Załącznik</option>
 					</select>
-					<select class="custom-select custom-select-sm ml-2">
-						<option>Wybierz zdefiowany filtr</option>
+					<select class="custom-select custom-select-sm ml-2 ">
+						<option>Zdefiowany filtr</option>
 						<option>Monitoring</option>
 						<option>Windykacja wewnętrzna</option>
 						<option>Windykacja zewnętrzna</option>
@@ -90,7 +90,7 @@
 					</select>
 				</div>
 				<div class="panel-toolbar ml-2">
-					<div class="d-flex position-relative ml-auto" style="max-width: 8rem;">
+					<div class="d-flex position-relative ml-auto" style="max-width: 7rem;">
 						<i class="fal fa-search position-absolute pos-left fs-lg px-2 py-1 mt-1 fs-xs"></i>
 						<input type="text" class="form-control form-control-sm pl-5" placeholder="Szukaj">
 						<a data-toggle="modal" data-target="#advancedSearchModal" class="btn-primary btn-search-close">
@@ -120,17 +120,14 @@
 							<div id="vertical-timeline" class=" vertical-timeline vertical-container dark-timeline">
 								<div class="vertical-timeline-block">
 									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
-										<i class="base-4 icon-stack-3x color-primary-400"></i>
-										<i class="base-4  icon-stack-2x color-primary-200"></i>
+										<i class="base-1 icon-stack-3x color-info-300"></i>
+										<i class="base-1  icon-stack-2x color-info-700"></i>
 										<i class="fal fa-inbox-out text-white icon-stack-1x"></i>
 									</span>
-
-
 									<div class="vertical-timeline-content" id="msg-01">
 										<div class="flex-1 d-flex flex-column cursor-pointer collapsed"
 											data-toggle="collapse" data-target="#msg-01 > .js-collapse"
 											aria-expanded="false">
-
 											<span class="text-sm text-muted">
 												<span class="badge badge-success">Wykonane </span> | <span
 													data-toggle="tooltip" data-placement="bottom"
@@ -141,18 +138,18 @@
 												2019.09.17 12:41 | <i class="fal fa-user mr-1"></i>
 												Halina Nowak
 												<a href="javascript:void(0);"
-													class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed"
+													class="btn btn-icon hidden-lg-down waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bootom" title=""
 													data-original-title="Wydrukuj dokument">
 													<i class="fas fa-print"></i>
 												</a>
-												<a href="javascript:void(0);" id="js-delete-selected"
+												<a href="javascript:void(0);"
 													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Wyślij e-mail">
 													<i class="fas fa-at fs-md"></i>
 												</a>
-												<a href="javascript:void(0);" id="js-delete-selected"
+												<a href="javascript:void(0);"
 													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Usuń">
@@ -166,18 +163,26 @@
 													<i class="fas fa-times-circle fs-md"></i>
 												</a>
 												<a href="javascript:void(0);"
-													class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Oznacz jako wykonane">
 													<i class="fas fa-check-circle fs-md"></i>
 												</a>
 												<a href="javascript:void(0);"
-													class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Edytuj">
 
 													<i class="fas fa-edit"></i>
 												</a>
+											</span>
+											<span class="text-sm text-muted">
+												<i class="fal fa-level-up fa-rotate-90 mr-1"> </i> <span
+													class="badge badge-dark">Akcja następcza </span> | <span
+													data-toggle="tooltip" data-placement="bottom"
+													data-original-title="Przejdź szczegółów">
+													Utwórz harmonogram spłaty
+												</span>
 											</span>
 											<h4>Zadanie: E-mail II wezwanie do zapłaty przesłane przez DOK automatyczny
 												klasa B
@@ -284,7 +289,7 @@
 												4 405,84 zł
 											</div>
 											<!-- File downloads -->
-											<div class="d-flex mt-3 flex-wrap">
+											<div class="d-flex mt-1 flex-wrap">
 												<div class="btn-group mr-1 mt-1" role="group"
 													aria-label="Button group with nested dropdown ">
 													<button type="button"
@@ -385,20 +390,7 @@
 																</div>
 															</div>
 														</span>
-														<li class="list-group-item">
-															<dl class="card-text row">
-																<dt class="col-sm-6 pr-0">Saldo</dt>
-																<dd class="col-sm-6 pl-0 text-right">1 543 432,32 zł
-																</dd>
-																<dt class="col-sm-6 pr-0">Limit kredytowy</dt>
-																<dd class="col-sm-6 pl-0 text-right"><span
-																		class="text-danger" data-placement="bottom"
-																		title=""
-																		data-original-title="Saldo rozszerzone">
-																		432 800,32 zł</span>
-																</dd>
-															</dl>
-														</li>
+
 													</ul>
 												</div>
 											</div>
@@ -407,20 +399,233 @@
 								</div>
 								<div class="vertical-timeline-block">
 									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
-										<i class="base-1 icon-stack-3x color-info-700"></i>
-										<i class="base-1  icon-stack-2x color-info-500"></i>
-										<i class="fal fa-inbox-out text-white icon-stack-1x"></i>
+										<i class="base-1 icon-stack-3x color-primary-200"></i>
+										<i class="base-1  icon-stack-2x color-primary-400"></i>
+										<i class="fal fa-inbox-in text-white icon-stack-1x"></i>
 									</span>
-
 									<div class="vertical-timeline-content" id="msg-02">
 										<div class="flex-1 d-flex flex-column cursor-pointer collapsed"
 											data-toggle="collapse" data-target="#msg-02 > .js-collapse"
+											aria-expanded="false">
+											<span class="text-sm text-muted">
+												<i class="fal fa-clock mr-1"></i>
+												2019.09.17 12:41 | <i class="fal fa-user mr-1"></i>
+												Halina Nowak
+												<a href="javascript:void(0);"
+													class="btn btn-icon hidden-lg-down waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bootom" title=""
+													data-original-title="Wydrukuj dokument">
+													<i class="fas fa-print"></i>
+												</a>
+												<a href="javascript:void(0);"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Usuń">
+													<i class="fas fa-trash fs-md"></i>
+												</a>
+												<a href="javascript:void(0);"
+													class="btn btn-icon mr-1 waves-effect waves-themed"
+													data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="Odpowiedz">
+													<i class="fas fa-reply fs-md"></i>
+												</a>
+											</span>
+											<h4>FW: To jest bardzo długa treść tytułu wiadomości e-mail przychodzącej z
+												zewnętrznego systemu
+											</h4>
+											<p>
+												<a href="javascript:void(0);"
+													class="mb-1 h4 text-primary">
+													<i class="fal fa-address-book"></i>
+												</a>
+												<span class="fs-md"><strong>Do: </strong>Administrator (administator@system.com)</span>
+											</p>
+											<p>
+												<a href="javascript:void(0);"
+													class="mb-1 h4 text-primary">
+													<i class="fal fa-address-book"></i>
+												</a>
+												<span class="fs-md"><strong>DW: </strong>Anna Nowak (a.nowak@gmail.com)</span>
+											</p>
+											<p class="border-top pt-1"> To jest 100 pierwszych znaków treści
+											</p>
+											<div class="col-12">
+												<div class="pt-1 pb-0 text-center">
+													<span class="collapsed-hidden">
+														<a href="javascript:void(0);" class="btn-link font-weight-bold">
+															Rozwiń szczegóły
+															<i class="fal fa-angle-down"></i></a>
+													</span>
+													<span class="collapsed-reveal">
+														<a href="javascript:void(0);" class="btn-link font-weight-bold">
+															Zwiń szczegóły
+															<i class="fal fa-angle-up"></i></a>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="js-collapse collapse" style="">
+											<div class="pt-3 pb-4">
+												We've taken customer feedback on board and are pleased to announce that
+												the the industry's most recommended and secure option for Two-Factor
+												Authentication (2FA) is now available to use on our site.
+												So, if you've tried our previous 2FA methods and have not been
+												convinced, why not try our new Time-Based One-Time Password (TOTP)? It's
+												super easy to use, and it works with many third-party 2FA apps you might
+												already have on your phone. We're positive you'll love the new improved
+												experience.
+												<br>
+												<br>
+												<div class="d-flex d-column align-items-start mb-3">
+													<img src="img/logo.png" alt="Reactor" class="mr-3 mt-1">
+													<div class="border-left pl-3">
+														<span class="fw-500 fs-lg d-block l-h-n">Admin SmartAdmin</span>
+														<span class="fw-400 fs-nano d-block l-h-n mb-1">Orthopedic
+															Surgeon</span>
+														<a href="#" class="mr-1 fs-xl active" style="color:#3b5998"><i
+																class="fab fa-facebook-square"></i></a>
+														<a href="#" class="mr-1 fs-xl active" style="color:#38A1F3"><i
+																class="fab fa-twitter-square"></i></a>
+														<a href="#" class="mr-1 fs-xl active" style="color:#0077B5"><i
+																class="fab fa-linkedin"></i></a>
+														<a href="#" class="mr-1 fs-xl active" style="color:#ff0000"><i
+																class="fab fa-youtube-square"></i></a>
+													</div>
+												</div>
+												<div class="text-muted fs-nano">
+													&#8203;PRIVATE AND CONFIDENTIAL. This e-mail, its contents and
+													attachments are private and confidential and is intended for the
+													recipient only. Any disclosure, copying or unauthorized use of such
+													information is prohibited. If you receive this message in error,
+													please notify us immediately and delete the original and any copies
+													and attachments.
+												</div>
+											</div>
+											<!-- File downloads -->
+											<div class="d-flex mt-1 flex-wrap">
+												<div class="btn-group mr-1 mt-1" role="group"
+													aria-label="Button group with nested dropdown ">
+													<button type="button"
+														class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+														data-action="toggle">
+														<span class="d-block text-truncate text-truncate-sm">
+															<i class="fal fa-file-excel mr-1 color-success-700"></i>
+															Invoices_2018_12
+														</span>
+													</button>
+													<div class="btn-group" role="group">
+														<button id="btnGroupDrop1" type="button"
+															class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false"></button>
+														<div class="dropdown-menu p-0 fs-xs"
+															aria-labelledby="btnGroupDrop1">
+															<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+															<a class="dropdown-item px-3 py-2" href="#">Open</a>
+															<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+														</div>
+													</div>
+												</div>
+												<div class="btn-group mr-1 mt-1" role="group"
+													aria-label="Button group with nested dropdown ">
+													<button type="button"
+														class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+														data-action="toggle">
+														<span class="d-block text-truncate text-truncate-sm">
+															<i class="fal fa-file-pdf mr-1 color-danger-700"></i>
+															Bloodworks
+															Patient 34124BA
+														</span>
+													</button>
+													<div class="btn-group" role="group">
+														<button id="btnGroupDrop2" type="button"
+															class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false"></button>
+														<div class="dropdown-menu p-0 fs-xs"
+															aria-labelledby="btnGroupDrop2">
+															<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+															<a class="dropdown-item px-3 py-2" href="#">Open</a>
+															<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<!-- File downloads end -->
+										</div>
+										<div class="vertical-client">
+											<div class="card border m-2">
+												<!-- notice the additions of utility paddings and display properties on .card-header -->
+												<div
+													class="card-header bg-success-900 d-flex align-items-center flex-wrap">
+													<!-- we wrap header title inside a span tag with utility padding -->
+													<div class="card-title">
+														<a>
+															<i class="fal fa-cloud fs-sm" data-toggle="tooltip"
+																data-placement="bottom" title=""
+																data-original-title="Widykacja zewnętrzna"></i>
+														</a>
+														Cn32232323(2)</div>
+													<button
+														class="btn btn-success btn-xs btn-icon ml-auto waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Dostawca">
+														<i class="fal fa-truck"></i>
+													</button>
+													<button
+														class="btn btn-icon btn-xs btn-warning ml-1 fs-md waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Uwaga klient zablokowany">
+														<i class="fal fa-exclamation-triangle"></i>
+													</button>
+												</div>
+												<div>
+													<ul class="list-group list-group-flush">
+														<span class="list-group-item">
+															<div class="row">
+																<div class="col-sm-9 m-auto">
+																	<span class="fs-lg">
+																		<span>Nazwa klienta</span>
+																	</span>
+																</div>
+																<div class="col-sm-3 client-class">
+																	<span class="fs-xxl" data-toggle="tooltip"
+																		data-placement="bottom" title=""
+																		data-original-title="Klasa: A">
+																		<div class="icon-stack">
+																			<i
+																				class="base base-2 icon-stack-3x opacity-100 color-danger-700"></i>
+																			<i
+																				class="fas icon-stack-1x opacity-100 color-white">D</i>
+																		</div>
+																	</span>
+																</div>
+															</div>
+														</span>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base-1 icon-stack-3x color-info-300"></i>
+										<i class="base-1  icon-stack-2x color-info-700"></i>
+										<i class="fal fa-inbox-out text-white icon-stack-1x"></i>
+									</span>
+
+									<div class="vertical-timeline-content" id="msg-03">
+										<div class="flex-1 d-flex flex-column cursor-pointer collapsed"
+											data-toggle="collapse" data-target="#msg-03 > .js-collapse"
 											aria-expanded="false">
 
 											<span class="text-sm text-muted">
 												<i class="fal fa-clock mr-1"></i>
 												2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
-												Maciej Ważny
+												System
 												<a href="javascript:void(0);"
 													class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bootom" title=""
@@ -428,13 +633,13 @@
 													<i class="fas fa-print"></i>
 												</a>
 
-												<a href="javascript:void(0);" id="js-delete-selected"
+												<a href="javascript:void(0);"
 													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Usuń">
 													<i class="fas fa-trash fs-md"></i>
 												</a>
-												<a href="javascript:void(0);" id="js-delete-selected"
+												<a href="javascript:void(0);"
 													class="btn btn-icon mr-1 waves-effect waves-themed"
 													data-toggle="tooltip" data-placement="bottom" title=""
 													data-original-title="Podgląd dokumentu">
@@ -452,7 +657,14 @@
 											<h4>E-mail: Informacja o terminach płatności faktur z Fresh Logistics
 												(email)
 											</h4>
-											<p> Conference on the sales results for the previous year. Monica please
+											<p>
+												<a href="javascript:void(0);"
+													class="mb-1 h4 text-primary">
+													<i class="fal fa-address-book"></i>
+												</a>
+												<span class="fs-md"><strong>Do: </strong> Anna Nowak (a.nowak@gmail.com)</a.nowak></span>
+											</p>
+											<p class="border-top pt-1"> Conference on the sales results for the previous year. Monica please
 												examine
 												sales trends in marketing and products. Below please find the current
 												status
@@ -475,13 +687,12 @@
 											</div>
 										</div>
 										<div class="js-collapse collapse" style="">
-
+											<p>To jest treść wygenerowana z szablonu generowania dokumentów</p>
 											<table class="table table-bordered m-0">
-
 												<tbody>
 													<tr>
 														<th scope="row">Odbiorca</th>
-														<td>Firma 2 <m.papiernik@smartmedia.com.pl>
+														<td>Firma 2
 														</td>
 													</tr>
 													<tr>
@@ -502,7 +713,7 @@
 											</table>
 
 											<!-- File downloads -->
-											<div class="d-flex mt-3 flex-wrap">
+											<div class="d-flex mt-1 flex-wrap">
 
 												<div class="btn-group mr-1 mt-1" role="group"
 													aria-label="Button group with nested dropdown ">
@@ -532,7 +743,7 @@
 											</div>
 											<!-- File downloads end -->
 										</div>
-											<div class="vertical-client">
+										<div class="vertical-client">
 											<div class="card border m-2">
 												<!-- notice the additions of utility paddings and display properties on .card-header -->
 												<div
@@ -544,7 +755,7 @@
 																data-placement="bottom" title=""
 																data-original-title="Widykacja zewnętrzna"></i>
 														</a>
-														Cn32232323(2)</div>
+														Cn12(243234)</div>
 													<button
 														class="btn btn-success btn-xs btn-icon ml-auto waves-effect waves-themed"
 														data-toggle="tooltip" data-placement="bottom" title=""
@@ -564,7 +775,7 @@
 															<div class="row">
 																<div class="col-sm-9 m-auto">
 																	<span class="fs-lg">
-																		<span>Nazwa klienta</span>
+																		<span>Nazwa klienta tgret</span>
 																	</span>
 																</div>
 																<div class="col-sm-3 client-class">
@@ -573,28 +784,15 @@
 																		data-original-title="Klasa: A">
 																		<div class="icon-stack">
 																			<i
-																				class="base base-2 icon-stack-3x opacity-100 color-danger-700"></i>
+																				class="base base-2 icon-stack-3x opacity-100 color-info-500"></i>
 																			<i
-																				class="fas icon-stack-1x opacity-100 color-white">D</i>
+																				class="fas icon-stack-1x opacity-100 color-white">A</i>
 																		</div>
 																	</span>
 																</div>
 															</div>
 														</span>
-														<li class="list-group-item">
-															<dl class="card-text row">
-																<dt class="col-sm-6 pr-0">Saldo</dt>
-																<dd class="col-sm-6 pl-0 text-right">1 543 432,32 zł
-																</dd>
-																<dt class="col-sm-6 pr-0">Limit kredytowy</dt>
-																<dd class="col-sm-6 pl-0 text-right"><span
-																		class="text-danger" data-placement="bottom"
-																		title=""
-																		data-original-title="Saldo rozszerzone">
-																		432 800,32 zł</span>
-																</dd>
-															</dl>
-														</li>
+
 													</ul>
 												</div>
 											</div>
@@ -603,131 +801,25 @@
 								</div>
 								<div class="vertical-timeline-block">
 									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
-										<i class="base base-7 icon-stack-3x opacity-100 color-success-500"></i>
+										<i class="base base-7 icon-stack-3x opacity-100 color-warning-500"></i>
 										<i class="fal fa-sticky-note icon-stack-1x opacity-100 color-white"></i>
 									</span>
 									<div class="vertical-timeline-content">
 										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
 											2019.09.15 09:41 | <i class="fal fa-user mr-1"></i>
-											Admin
+											Admin | <span class="badge badge-secondary">Nazwa typu notatki </span>
 											<a href="javascript:void(0);"
-												class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed">
-												<i class="fas fa-print"></i>
-											</a>
-											<a href="javascript:void(0);" id="js-delete-selected"
-												class="btn btn-icon mr-1 waves-effect waves-themed">
-												<i class="fas fa-trash fs-md"></i>
-											</a>
-											<a href="javascript:void(0);"
-												class="btn btn-icon mr-1 waves-effect waves-themed">
-												<i class="fas fa-edit fs-md"></i>
-											</a>
-										</span>
-										<h4>Notatka</h4>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-											Lorem Ipsum has been the industry's standard dummy text ever since.</p>
-												<div class="vertical-client">
-											<div class="card border m-2">
-												<!-- notice the additions of utility paddings and display properties on .card-header -->
-												<div
-													class="card-header bg-success-900 d-flex align-items-center flex-wrap">
-													<!-- we wrap header title inside a span tag with utility padding -->
-													<div class="card-title">
-														<a>
-															<i class="fal fa-cloud fs-sm" data-toggle="tooltip"
-																data-placement="bottom" title=""
-																data-original-title="Widykacja zewnętrzna"></i>
-														</a>
-														Cn32232323(2)</div>
-													<button
-														class="btn btn-success btn-xs btn-icon ml-auto waves-effect waves-themed"
-														data-toggle="tooltip" data-placement="bottom" title=""
-														data-original-title="Dostawca">
-														<i class="fal fa-truck"></i>
-													</button>
-													<button
-														class="btn btn-icon btn-xs btn-warning ml-1 fs-md waves-effect waves-themed"
-														data-toggle="tooltip" data-placement="bottom" title=""
-														data-original-title="Uwaga klient zablokowany">
-														<i class="fal fa-exclamation-triangle"></i>
-													</button>
-												</div>
-												<div>
-													<ul class="list-group list-group-flush">
-														<span class="list-group-item">
-															<div class="row">
-																<div class="col-sm-9 m-auto">
-																	<span class="fs-lg">
-																		<span>Nazwa klienta</span>
-																	</span>
-																</div>
-																<div class="col-sm-3 client-class">
-																	<span class="fs-xxl" data-toggle="tooltip"
-																		data-placement="bottom" title=""
-																		data-original-title="Klasa: A">
-																		<div class="icon-stack">
-																			<i
-																				class="base base-2 icon-stack-3x opacity-100 color-danger-700"></i>
-																			<i
-																				class="fas icon-stack-1x opacity-100 color-white">D</i>
-																		</div>
-																	</span>
-																</div>
-															</div>
-														</span>
-														<li class="list-group-item">
-															<dl class="card-text row">
-																<dt class="col-sm-6 pr-0">Saldo</dt>
-																<dd class="col-sm-6 pl-0 text-right">1 543 432,32 zł
-																</dd>
-																<dt class="col-sm-6 pr-0">Limit kredytowy</dt>
-																<dd class="col-sm-6 pl-0 text-right"><span
-																		class="text-danger" data-placement="bottom"
-																		title=""
-																		data-original-title="Saldo rozszerzone">
-																		432 800,32 zł</span>
-																</dd>
-															</dl>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="vertical-timeline-block">
-									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
-										<i class="base-19 icon-stack-3x color-danger-700"></i>
-										<i class="base-19  icon-stack-2x color-danger-500"></i>
-										<i class="fal fa-paperclip text-white icon-stack-1x"></i>
-									</span>
-
-
-									<div class="vertical-timeline-content">
-										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
-											2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
-											Maciej Ważny
-											<a href="javascript:void(0);"
-												class="btn btn-icon ml-1 fs-lg hidden-lg-down waves-effect waves-themed"
-												data-toggle="tooltip" data-placement="bootom" title=""
-												data-original-title="Wydrukuj dokument">
-												<i class="fas fa-print"></i>
-											</a>
-
-											<a href="javascript:void(0);" id="js-delete-selected"
 												class="btn btn-icon mr-1 waves-effect waves-themed"
 												data-toggle="tooltip" data-placement="bottom" title=""
 												data-original-title="Usuń">
 												<i class="fas fa-trash fs-md"></i>
 											</a>
-											<a href="javascript:void(0);" id="js-delete-selected"
+											<a href="javascript:void(0);"
 												class="btn btn-icon mr-1 waves-effect waves-themed"
 												data-toggle="tooltip" data-placement="bottom" title=""
 												data-original-title="Podgląd dokumentu">
 												<i class="fas fa-paperclip fs-md"></i>
 											</a>
-
 											<a href="javascript:void(0);"
 												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
 												data-toggle="tooltip" data-placement="bottom" title=""
@@ -736,12 +828,313 @@
 												<i class="fas fa-edit"></i>
 											</a>
 										</span>
-										<h4>Plik: Nazwa pliku
-										</h4>
-										<p> To jest opis pliku
-										</p>
-										<div class="d-flex mt-3 flex-wrap">
+										<h4>Notatka</h4>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Lorem Ipsum has been the industry's standard dummy text ever since.</p>
+										<div class="vertical-client">
+											<div class="card border m-2">
+												<!-- notice the additions of utility paddings and display properties on .card-header -->
+												<div
+													class="card-header bg-success-900 d-flex align-items-center flex-wrap">
+													<!-- we wrap header title inside a span tag with utility padding -->
+													<div class="card-title">
+														<a>
+															<i class="fal fa-cloud fs-sm" data-toggle="tooltip"
+																data-placement="bottom" title=""
+																data-original-title="Widykacja zewnętrzna"></i>
+														</a>
+														Cn32232323(2)</div>
+													<button
+														class="btn btn-success btn-xs btn-icon ml-auto waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Dostawca">
+														<i class="fal fa-truck"></i>
+													</button>
+													<button
+														class="btn btn-icon btn-xs btn-warning ml-1 fs-md waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Uwaga klient zablokowany">
+														<i class="fal fa-exclamation-triangle"></i>
+													</button>
+												</div>
+												<div>
+													<ul class="list-group list-group-flush">
+														<span class="list-group-item">
+															<div class="row">
+																<div class="col-sm-9 m-auto">
+																	<span class="fs-lg">
+																		<span>Nazwa klienta</span>
+																	</span>
+																</div>
+																<div class="col-sm-3 client-class">
+																	<span class="fs-xxl" data-toggle="tooltip"
+																		data-placement="bottom" title=""
+																		data-original-title="Klasa: A">
+																		<div class="icon-stack">
+																			<i
+																				class="base base-2 icon-stack-3x opacity-100 color-danger-700"></i>
+																			<i
+																				class="fas icon-stack-1x opacity-100 color-white">D</i>
+																		</div>
+																	</span>
+																</div>
+															</div>
+														</span>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base base-7 icon-stack-3x opacity-100 color-success-400"></i> <i
+											class="base base-7 icon-stack-2x opacity-100 color-success-800"></i> <i
+											class="fal fa-envelope icon-stack-1x opacity-100 color-white"></i>
+
+									</span>
+									<div class="vertical-timeline-content">
+										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
+											2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
+											Od kogo: Maciej Ważny
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Usuń">
+												<i class="fas fa-trash fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Odbiorcy">
+												<i class="fas fa-users fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Podgląd">
+												<i class="fas fa-eye"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Oznacz jako przeczytane">
+												<i class="fas fa-envelope-open"></i>
+											</a>
+										</span>
+										<h4>Wiadomość systemowa
+										</h4>
+										<p>
+											<a href="javascript:void(0);"
+												class="width-3 height-2 pr-3 mb-0 d-inline-flex align-items-center justify-content-center position-relative h4 text-primary">
+												<i class="fal fa-envelope"></i>
+												<span class="badge badge-icon pos-top pos-right">1/3</span>
+											</a>
+											<span class="fs-md"><strong>Odbiorcy: </strong>Administrator, Malinowska
+												Joanna, Zysk Anna</span>
+										</p>
+										<p class="border-top pt-1"> Usunięcie sprawy nr: 854/PS/2019 Klient: IMPULS DEMO
+											Firma 1
+										</p>
+
+										<div class="vertical-client">
+											<div class="card border m-2">
+												<!-- notice the additions of utility paddings and display properties on .card-header -->
+												<div
+													class="card-header bg-primary-200 d-flex align-items-center flex-wrap">
+													<!-- we wrap header title inside a span tag with utility padding -->
+													<div class="card-title">
+														<a>
+															<i class="fal fa-cloud fs-sm" data-toggle="tooltip"
+																data-placement="bottom" title=""
+																data-original-title="Widykacja zewnętrzna"></i>
+														</a>
+														Cn12(213432)</div>
+													<button
+														class="btn btn-success btn-xs btn-icon ml-auto waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Dostawca">
+														<i class="fal fa-truck"></i>
+													</button>
+													<button
+														class="btn btn-icon btn-xs btn-warning ml-1 fs-md waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Uwaga klient zablokowany">
+														<i class="fal fa-exclamation-triangle"></i>
+													</button>
+												</div>
+												<div>
+													<ul class="list-group list-group-flush">
+														<span class="list-group-item">
+															<div class="row">
+																<div class="col-sm-9 m-auto">
+																	<span class="fs-lg">
+																		<span>Nazwa klienta</span>
+																	</span>
+																</div>
+																<div class="col-sm-3 client-class">
+																	<span class="fs-xxl" data-toggle="tooltip"
+																		data-placement="bottom" title=""
+																		data-original-title="Klasa: B">
+																		<div class="icon-stack">
+																			<i
+																				class="base base-2 icon-stack-3x opacity-100 color-success-500"></i>
+																			<i
+																				class="fas icon-stack-1x opacity-100 color-white">B</i>
+																		</div>
+																	</span>
+																</div>
+															</div>
+														</span>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base base-7 icon-stack-3x opacity-100 color-success-400"></i> <i
+											class="base base-7 icon-stack-2x opacity-100 color-success-800"></i> <i
+											class="fal fa-envelope-open icon-stack-1x opacity-100 color-white"></i>
+
+									</span>
+									<div class="vertical-timeline-content">
+										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
+											2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
+											Od kogo: Maciej Ważny
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Usuń">
+												<i class="fas fa-trash fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Odbiorcy">
+												<i class="fas fa-users fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Podgląd">
+												<i class="fas fa-eye"></i>
+
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Oznacz jako nieprzeczytane">
+												<i class="fas fa-envelope"></i>
+											</a>
+										</span>
+										<h4>Wiadomość systemowa
+										</h4>
+										<p>
+											<a href="javascript:void(0);"
+												class="mb-1 d-inline-flex align-items-center justify-content-center position-relative h4 text-primary">
+												<i class="fal fa-envelope-open"></i>
+											</a>
+											<span class="fs-md"><strong>Odbiorcy: </strong>Administrator</span>
+										</p>
+										<p class="border-top pt-1"> Usunięcie sprawy nr: 854/PS/2019 Klient: IMPULS DEMO
+											Firma 1
+										</p>
+
+										<div class="vertical-client">
+											<div class="card border m-2">
+												<!-- notice the additions of utility paddings and display properties on .card-header -->
+												<div
+													class="card-header bg-primary-200 d-flex align-items-center flex-wrap">
+													<!-- we wrap header title inside a span tag with utility padding -->
+													<div class="card-title">
+														<a>
+															<i class="fal fa-cloud fs-sm" data-toggle="tooltip"
+																data-placement="bottom" title=""
+																data-original-title="Widykacja zewnętrzna"></i>
+														</a>
+														Cn12(213432)</div>
+													<button
+														class="btn btn-success btn-xs btn-icon ml-auto waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Dostawca">
+														<i class="fal fa-truck"></i>
+													</button>
+													<button
+														class="btn btn-icon btn-xs btn-warning ml-1 fs-md waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Uwaga klient zablokowany">
+														<i class="fal fa-exclamation-triangle"></i>
+													</button>
+												</div>
+												<div>
+													<ul class="list-group list-group-flush">
+														<span class="list-group-item">
+															<div class="row">
+																<div class="col-sm-9 m-auto">
+																	<span class="fs-lg">
+																		<span>Nazwa klienta</span>
+																	</span>
+																</div>
+																<div class="col-sm-3 client-class">
+																	<span class="fs-xxl" data-toggle="tooltip"
+																		data-placement="bottom" title=""
+																		data-original-title="Klasa: B">
+																		<div class="icon-stack">
+																			<i
+																				class="base base-2 icon-stack-3x opacity-100 color-success-500"></i>
+																			<i
+																				class="fas icon-stack-1x opacity-100 color-white">B</i>
+																		</div>
+																	</span>
+																</div>
+															</div>
+														</span>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base base-1 icon-stack-3x opacity-100 color-fusion-100"></i> <i
+											class="base base-19 icon-stack-2x opacity-100 color-fusion-400"></i> <i
+											class="fal fa-paperclip icon-stack-1x opacity-100 color-white"></i>
+									</span>
+									<div class="vertical-timeline-content">
+										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
+											2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
+											Maciej Ważny | <span class="badge badge-secondary">Wygnerowany w systemie
+											</span>
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Usuń">
+												<i class="fas fa-trash fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Podgląd dokumentu">
+												<i class="fas fa-paperclip fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Edytuj">
+												<i class="fas fa-edit"></i>
+											</a>
+										</span>
+										<h4>Raport przeniesienia
+										</h4>
+										<p> Raport z przeniesienia dokumentów do Postepowanie sądowe
+										</p>
+										<div class="d-flex mt-1 flex-wrap">
 											<div class="btn-group mr-1 mt-1" role="group"
 												aria-label="Button group with nested dropdown ">
 												<button type="button"
@@ -769,11 +1162,128 @@
 
 										</div>
 										<!-- File downloads end -->
-											<div class="vertical-client">
+										<div class="vertical-client">
 											<div class="card border m-2">
 												<!-- notice the additions of utility paddings and display properties on .card-header -->
 												<div
-													class="card-header bg-success-900 d-flex align-items-center flex-wrap">
+													class="card-header bg-primary-200 d-flex align-items-center flex-wrap">
+													<!-- we wrap header title inside a span tag with utility padding -->
+													<div class="card-title">
+														<a>
+															<i class="fal fa-cloud fs-sm" data-toggle="tooltip"
+																data-placement="bottom" title=""
+																data-original-title="Widykacja zewnętrzna"></i>
+														</a>
+														Cn32232323(2)</div>
+													<button
+														class="btn btn-success btn-xs btn-icon ml-auto waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Dostawca">
+														<i class="fal fa-truck"></i>
+													</button>
+													<button
+														class="btn btn-icon btn-xs btn-warning ml-1 fs-md waves-effect waves-themed"
+														data-toggle="tooltip" data-placement="bottom" title=""
+														data-original-title="Uwaga klient zablokowany">
+														<i class="fal fa-exclamation-triangle"></i>
+													</button>
+												</div>
+												<div>
+													<ul class="list-group list-group-flush">
+														<span class="list-group-item">
+															<div class="row">
+																<div class="col-sm-9 m-auto">
+																	<span class="fs-lg">
+																		<span>Nazwa klienta</span>
+																	</span>
+																</div>
+																<div class="col-sm-3 client-class">
+																	<span class="fs-xxl" data-toggle="tooltip"
+																		data-placement="bottom" title=""
+																		data-original-title="Klasa: A">
+																		<div class="icon-stack">
+																			<i
+																				class="base base-2 icon-stack-3x opacity-100 color-info-500"></i>
+																			<i
+																				class="fas icon-stack-1x opacity-100 color-white">A</i>
+																		</div>
+																	</span>
+																</div>
+															</div>
+														</span>
+
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="vertical-timeline-block">
+									<span class="timeline-icon icon-stack display-4 mr-3 flex-shrink-0">
+										<i class="base base-1 icon-stack-3x opacity-100 color-fusion-100"></i> <i
+											class="base base-19 icon-stack-2x opacity-100 color-fusion-300"></i> <i
+											class="fal fa-paperclip icon-stack-1x opacity-100 color-white"></i>
+									</span>
+									<div class="vertical-timeline-content">
+										<span class="text-sm text-muted"><i class="fal fa-clock mr-1"></i>
+											2019.09.16 10:11 | <i class="fal fa-user mr-1"></i>
+											Maciej Ważny | <span class="badge badge-secondary">Wgrany przez użytkownika
+											</span>
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Usuń">
+												<i class="fas fa-trash fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon mr-1 waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Podgląd dokumentu">
+												<i class="fas fa-paperclip fs-md"></i>
+											</a>
+											<a href="javascript:void(0);"
+												class="btn btn-icon ml-1 fs-lg waves-effect waves-themed"
+												data-toggle="tooltip" data-placement="bottom" title=""
+												data-original-title="Edytuj">
+												<i class="fas fa-edit"></i>
+											</a>
+										</span>
+										<h4>Zdjęcie pieczątki
+										</h4>
+										<p> To jest opis załącznia
+										</p>
+										<div class="d-flex mt-1 flex-wrap">
+											<div class="btn-group mr-1 mt-1" role="group"
+												aria-label="Button group with nested dropdown ">
+												<button type="button"
+													class="btn btn-default btn-xs btn-block px-1 py-1 fw-500"
+													data-action="toggle">
+													<span class="d-block text-truncate text-truncate-sm">
+														<i class="fal fa-file-image mr-1 color-info-500"></i>
+														pieczątka.jpeg
+													</span>
+												</button>
+												<div class="btn-group" role="group">
+													<button id="btnGroupDrop2" type="button"
+														class="btn btn-default btn-xs dropdown-toggle px-2 js-waves-off"
+														data-toggle="dropdown" aria-haspopup="true"
+														aria-expanded="false"></button>
+													<div class="dropdown-menu p-0 fs-xs"
+														aria-labelledby="btnGroupDrop2">
+														<a class="dropdown-item px-3 py-2" href="#">Forward</a>
+														<a class="dropdown-item px-3 py-2" href="#">Open</a>
+														<a class="dropdown-item px-3 py-2" href="#">Delete</a>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<!-- File downloads end -->
+										<div class="vertical-client">
+											<div class="card border m-2">
+												<!-- notice the additions of utility paddings and display properties on .card-header -->
+												<div
+													class="card-header bg-primary-200 d-flex align-items-center flex-wrap">
 													<!-- we wrap header title inside a span tag with utility padding -->
 													<div class="card-title">
 														<a>
@@ -818,20 +1328,7 @@
 																</div>
 															</div>
 														</span>
-														<li class="list-group-item">
-															<dl class="card-text row">
-																<dt class="col-sm-6 pr-0">Saldo</dt>
-																<dd class="col-sm-6 pl-0 text-right">1 543 432,32 zł
-																</dd>
-																<dt class="col-sm-6 pr-0">Limit kredytowy</dt>
-																<dd class="col-sm-6 pl-0 text-right"><span
-																		class="text-danger" data-placement="bottom"
-																		title=""
-																		data-original-title="Saldo rozszerzone">
-																		432 800,32 zł</span>
-																</dd>
-															</dl>
-														</li>
+
 													</ul>
 												</div>
 											</div>
@@ -992,12 +1489,26 @@
 		</div>
 	</div>
 
-	<div class="col-lg-4">
-		<div id="panel-2" class="panel" data-panel-fullscreen="false">
+	<div class="col-lg-4 col-xl-3 ">
+		<div id="panel-2" class="panel" data-panel-close="false" data-panel-fullscreen="false"
+			data-panel-collapsed="false" data-panel-color="false">
 			<div class="panel-hdr">
 				<h4>
 					Szczegóły
 				</h4>
+				<div class="panel-toolbar ml-auto">
+					<button class="btn btn-panel bg-transparent fs-xl w-auto h-auto rounded-0"
+						data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10"
+						data-original-title="Collapse"><i class="fal fa-window-minimize"></i></button>
+
+					<button class="btn btn-panel bg-transparent fs-xl w-auto h-auto rounded-0"
+						data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10"
+						data-original-title="Fullscreen"><i class="fal fa-expand"></i></button>
+
+					<button class="btn btn-panel bg-transparent fs-xl w-auto h-auto rounded-0" data-action="panel-close"
+						data-toggle="tooltip" data-offset="0,10" data-original-title="Close"><i
+							class="fal fa-times"></i></button>
+				</div>
 			</div>
 			<div class="panel-container show">
 				<div class="panel-content p-0">
@@ -1008,7 +1519,7 @@
 								<div class="d-flex flex-row px-3 pt-3 pb-2">
 									<!-- profile photo : lazy loaded -->
 									<span class="icon-stack display-4 mr-3 flex-shrink-0">
-										<i class="base-2 icon-stack-3x color-primary-400"></i>
+										<i class="base base-2 icon-stack-3x color-primary-400"></i>
 										<i class="base-10 text-white icon-stack-1x"></i>
 										<i class="ni md-profile color-primary-800 icon-stack-2x"></i>
 									</span>
@@ -1021,7 +1532,7 @@
 										and
 										Andrew, you wanna join?
 										<!-- file download -->
-										<div class="d-flex mt-3 flex-wrap">
+										<div class="d-flex mt-1 flex-wrap">
 
 											<div class="btn-group mr-1 mt-1" role="group"
 												aria-label="Button group with nested dropdown ">
@@ -1108,8 +1619,12 @@
 {{#*inline "scripts-block"}}
 
 <script type="text/javascript">
-	/* Activate smart panels */
-	$('#js-page-content').smartPanel();
+
+	// push settings with "false" save to local
+	initApp.pushSettings("margin-left", false);
+
+		/* Activate smart panels */
+//	$('#js-page-content').smartPanel();
 </script>
 
 <!-- The order of scripts is irrelevant. Please check out the plugin pages for more details about these plugins below: -->
