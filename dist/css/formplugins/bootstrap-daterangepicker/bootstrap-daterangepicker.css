@@ -1191,6 +1191,9 @@ body.nav-function-hidden .page-content-wrapper {
 .client-class {
   text-align: end; }
 
+.page-content {
+  padding: 1rem 1rem; }
+
 .daterangepicker table tr td,
 .daterangepicker table tr th {
   width: 38px !important;
